@@ -133,6 +133,8 @@ plugins:
   - jekyll/scholar
   - jekyll-twitter-plugin
   - jemoji
+  - jekyll-include-cache
+
 
 # Extras
 github: [metadata]
