@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paper Catalog — GameVLA Survey</title>
+<meta name="description" content="Search, filter, and sort all 1,327 papers screened for the GameVLA survey, tagged by paradigm phase, quality tier, method, and venue.">
+<link rel="canonical" href="https://holdenhu.github.io/GameVLA-Survey/papers.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GameVLA Survey">
+<meta property="og:url" content="https://holdenhu.github.io/GameVLA-Survey/papers.html">
+<meta property="og:title" content="Paper Catalog — GameVLA Survey">
+<meta property="og:description" content="All 1,327 papers screened for the survey, searchable by title, venue, method, phase, and quality tier — with arXiv links.">
+<meta property="og:image" content="https://holdenhu.github.io/GameVLA-Survey/assets/og_card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paper Catalog — GameVLA Survey">
+<meta name="twitter:description" content="All 1,327 papers screened for the survey, searchable by title, venue, method, phase, and quality tier.">
+<meta name="twitter:image" content="https://holdenhu.github.io/GameVLA-Survey/assets/og_card.png">
+<meta name="theme-color" content="#14233a">
 <link rel="icon" href="assets/title_icon.png">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -118,6 +133,7 @@
   <div class="wrap">
     <span>&copy; 2026 Hengchang Hu &middot; NetEase Fuxi AI SG Lab</span>
     <span>Paper CC&nbsp;BY&nbsp;4.0 &middot; Code MIT</span>
+    <span><a href="mailto:hengchang.hu@oc.netease.com?subject=%5BCatalog%5D%20correction">Suggest a paper</a></span>
     <span><a href="index.html">&larr; Project page</a></span>
     <span><a href="https://github.com/HoldenHu/GameVLA-Survey">GitHub</a></span>
   </div>
@@ -132,7 +148,12 @@ let sortKey = 'y', sortDir = -1;
 const PH_COLOR = { 'IV-VLA':'var(--phase-vla)', 'III-VLM':'var(--phase-vlm)',
                    'II-LLM':'var(--phase-llm)', 'I-RL':'var(--phase-rl)', 'NA':'var(--faint)' };
 
-fetch('data/papers_web.json').then(r => r.json()).then(d => { P.push(...d); init(); })
+fetch('data/papers_web.json').then(r => r.json()).then(d => {
+  // a few legacy rows carry `m` as a bare string rather than a list — normalise so
+  // every later .join()/.map() is safe
+  P.push(...d.map(p => { if (!Array.isArray(p.m)) p.m = p.m ? [p.m] : []; return p; }));
+  init();
+})
   .catch(() => { document.getElementById('count').textContent =
     'Could not load data/papers_web.json — the catalog file ships with the repository.'; });
 fetch('data/stats_web.json').then(r => r.json()).then(renderStats);
@@ -193,6 +214,8 @@ function render() {
 function esc(s) { const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
 
 function init() {
+  var pre = new URLSearchParams(location.search).get('q');
+  if (pre) { document.getElementById('q').value = pre; query = pre.trim().toLowerCase(); }
   document.getElementById('q').addEventListener('input', e => { query = e.target.value.trim().toLowerCase(); applyFilters(); });
   document.querySelectorAll('[data-k]').forEach(c => c.addEventListener('click', () => {
     document.querySelectorAll('[data-k]').forEach(x => x.classList.remove('on'));

@@ -5,8 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Planning to Playing — A Diagnostic Survey of the VLA Turn in Game Agents</title>
 <meta name="description" content="A diagnostic survey of game Vision-Language-Action agents: a four-phase taxonomy, the architecture stack, and original falsification experiments under one real-time game clock.">
+<link rel="canonical" href="https://holdenhu.github.io/GameVLA-Survey/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GameVLA Survey">
+<meta property="og:url" content="https://holdenhu.github.io/GameVLA-Survey/">
+<meta property="og:title" content="Planning to Playing: A Diagnostic Survey of the VLA Turn in Game Agents">
+<meta property="og:description" content="Under one real-time clock, GPT-4o falls below random on Pong while a 30M distilled policy holds the full 14.4 Hz cadence. A diagnostic survey with an original falsification experiment behind every core claim.">
+<meta property="og:image" content="https://holdenhu.github.io/GameVLA-Survey/assets/og_card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Planning to Playing — GameVLA diagnostic survey">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Planning to Playing: A Diagnostic Survey of the VLA Turn in Game Agents">
+<meta name="twitter:description" content="Under one real-time clock, GPT-4o falls below random on Pong while a 30M distilled policy holds 14.4 Hz. One falsification experiment behind every core claim.">
+<meta name="twitter:image" content="https://holdenhu.github.io/GameVLA-Survey/assets/og_card.png">
+<meta name="theme-color" content="#14233a">
 <link rel="icon" href="assets/title_icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="js/pong-sim.js" defer></script>
+<script src="js/clock-demo.js" defer></script>
+<script src="js/site.js" defer></script>
 </head>
 <body>
 
@@ -30,6 +48,7 @@
       <a href="#result">Headline result</a>
       <a href="#taxonomy">Taxonomy</a>
       <a href="#rubric">Rubric</a>
+      <a href="#reading">Search</a>
       <a href="papers.html">Catalog</a>
       <a href="#citation">Cite</a>
     </nav>
@@ -92,6 +111,48 @@
         <p>Every core claim is rated by evidential strength; the modality and knowing&ndash;doing pilots are marked plausible-but-unproven rather than allowed to outrun the data.</p>
       </div>
     </div>
+
+    <div class="tour" id="tour">
+      <div class="stage">
+        <div class="strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="scene on" data-ms="14000">
+          <div class="sk">01 &middot; The conflict</div>
+          <h4>Four phases, one conflict</h4>
+          <p>RL Specialists &rarr; LLM Planners &rarr; Early VLMs &rarr; VLA Generalists. Every phase is an answer to the same question &mdash; how to buy intelligence without paying latency &mdash; and every phase pays a different price for it.</p>
+        </div>
+        <div class="scene" data-ms="15000">
+          <div class="sk">02 &middot; The apparatus</div>
+          <h4>One clock, applied to every agent</h4>
+          <p>The harness fixes wall-clock FPS and repeats each action until the next decision. Latency is not measured on the side: it costs points exactly as it does on real hardware, at 45&nbsp;s per episode.</p>
+        </div>
+        <div class="scene" data-ms="16000">
+          <div class="sk">03 &middot; The headline result</div>
+          <div class="big">GPT-4o &minus;21.0 &nbsp;&middot;&nbsp; VA-30M +5.1 <em>@ 14.4 Hz</em></div>
+          <p>On Pong, under the same clock: the frontier VLM lands below random, while a 30M policy distilled from a competent teacher sustains the full cadence &mdash; 0.99 [0.92, 1.06] of its teacher.</p>
+        </div>
+        <div class="scene" data-ms="15000">
+          <div class="sk">04 &middot; The protocol is the finding</div>
+          <div class="big">blocking &rarr; 0.0 <em>on all three titles</em></div>
+          <p>Let the emulator wait for the model and the same GPT-4o never loses a point to inference time. A score without a fixed clock cannot separate latency from skill &mdash; so the protocol is part of the claim.</p>
+        </div>
+        <div class="scene" data-ms="16000">
+          <div class="sk">05 &middot; The mechanism</div>
+          <h4>The bottleneck is the clock, not the checkpoint</h4>
+          <p>Throttle a competent PPO oracle below ~9&nbsp;Hz and it collapses toward random on the reaction-critical titles. A label shift at human-reaction scale does the same to warm-started behavior cloning.</p>
+        </div>
+        <div class="scene" data-ms="14000">
+          <div class="sk">06 &middot; Evidence</div>
+          <div class="big">every claim carries a grade</div>
+          <p>241 cited works, 1,327 screened papers, 30 agents in the taxonomy &mdash; each core claim paired with the experiment that could falsify it, and the exploratory pilots marked plausible-but-unproven.</p>
+        </div>
+        <div class="cbar phase-strip" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="bar">
+        <button class="sbtn" id="tour-play" type="button">Play the 90-second tour</button>
+        <div class="prog"><i id="tour-prog"></i></div>
+        <span class="steps" id="tour-steps">scene 1 / 6 &middot; 0:00 / 1:30</span>
+      </div>
+    </div>
   </section>
 
   <!-- ── Headline result ───────────────────────────────────────────────── -->
@@ -101,8 +162,10 @@
     <p class="lede">We re-evaluate representative agents under one real-time protocol — fixed wall-clock FPS with stale-action repeat — on three Atari titles, pooling 3 seeds &times; 5 episodes per cell.</p>
 
     <figure>
+      <a class="zoom" href="assets/pareto_realtime.png" data-caption="Figure 4 — Real-time head-to-head">
       <img src="assets/pareto_realtime.png" alt="Real-time head-to-head: effective control frequency versus normalized score">
-      <figcaption><b>Real-time head-to-head.</b> <i>x</i>: effective control frequency (log scale). <i>y</i>: score normalized per game (0 = random, 1 = PPO teacher), with bootstrap 95% CIs. The VLM cluster (GPT-4o, 0.6&ndash;0.8&nbsp;Hz) sits below the random level on Pong and near random on Breakout. VA-30M (14.4&nbsp;Hz) reaches 0.99 [0.92, 1.06] on Pong and 0.25 [0.24, 0.26] on Breakout, and matches its teacher at SpaceInvaders' deterministic saturation point (hollow marker: ceiling match, non-discriminative). The gray dashed curve is the spine: the PPO teacher itself, throttled from 15 to 1&nbsp;Hz, collapsing toward random.</figcaption>
+      </a>
+      <figcaption><b>Real-time head-to-head.</b> <i>x</i>: effective control frequency (log scale). <i>y</i>: score normalized per game (0 = random, 1 = PPO teacher), with bootstrap 95% CIs. The VLM cluster (GPT-4o, 0.6&ndash;0.8&nbsp;Hz) sits below the random level on Pong and near random on Breakout. VA-30M (14.4&nbsp;Hz) reaches 0.99 [0.92, 1.06] on Pong and 0.25 [0.24, 0.26] on Breakout, and matches its teacher at SpaceInvaders' deterministic saturation point (hollow marker: ceiling match, non-discriminative). The gray dashed curve is the spine: the PPO teacher itself, throttled from 15 to 1&nbsp;Hz, collapsing toward random.<span class="zoomtag">Click to enlarge &#8599;</span></figcaption>
     </figure>
 
     <div class="tablecard">
@@ -129,6 +192,31 @@
       <h3>The protocol is the finding</h3>
       <p>Under a <i>blocking</i> protocol — the emulator waits for the model — GPT-4o scores 0.0 on all three titles, and inference latency never costs a point. Under the real-time harness the same model lands below random on Pong (&minus;0.13 normalized) and near random on Breakout (0.02). Evaluation protocol is not a detail of the method; it is part of the claim.</p>
     </div>
+
+    <h3 style="margin-top:28px">Feel the mechanism</h3>
+    <p class="lede" style="margin-bottom:12px">The paddle below decides at the rate you pick, then repeats that decision until the next tick &mdash; the same stale-action repeat the harness applies to every agent. Hold 14.4&nbsp;Hz and it stays on the ball; slide toward 1&nbsp;Hz and it spends the rally aiming where the ball used to be.</p>
+    <div class="clockdemo">
+      <div class="cdhead">
+        <button class="sbtn" id="cd-run" type="button">Start 45 s episode</button>
+        <div class="cdctl">
+          <label for="cd-hz">Control rate</label>
+          <input type="range" id="cd-hz" min="0.5" max="15" step="0.1" value="14.4">
+          <b id="cd-hzval">14.4 Hz</b>
+        </div>
+        <div class="cdctl" id="cd-presets">
+          <button class="sbtn" type="button" data-hz="0.6">GPT-4o 0.6</button>
+          <button class="sbtn" type="button" data-hz="7.4">Qwen-4B 7.4</button>
+          <button class="sbtn" type="button" data-hz="14.4">VA-30M 14.4</button>
+        </div>
+        <div class="cdscore" aria-live="polite">
+          <span>returns <b id="cd-ret">0</b></span>
+          <span>misses <b id="cd-miss">0</b></span>
+          <span>clock <b id="cd-t">0.0 s</b></span>
+        </div>
+      </div>
+      <canvas id="cd-canvas" width="1000" height="470" role="img" aria-label="A paddle that re-aims only at the selected control rate; between decisions it keeps aiming where the ball was"></canvas>
+      <div class="cdnote"><b>An illustration, not a measured result.</b> The measured version of this mechanism is Figure&nbsp;4 of the paper: a PPO oracle throttled below ~9&nbsp;Hz collapses toward random. Each episode here runs the same 45&nbsp;s real-time budget as the harness.</div>
+    </div>
   </section>
 
   <!-- ── Taxonomy ──────────────────────────────────────────────────────── -->
@@ -137,8 +225,10 @@
     <h2>30 agents across four phases</h2>
     <p class="lede">Every system in the taxonomy is scored on the same interface commitments: backbone, input modality, reasoning, action space, control policy, and latency. Select a phase.</p>
     <figure>
+      <a class="zoom" href="assets/timeline.png" data-caption="Evolution timeline (2015–2026)">
       <img src="assets/timeline.png" alt="Game VLA evolution timeline 2015–2026, milestone systems grouped by paradigm phase">
-      <figcaption><b>Evolution timeline (2015&ndash;2026).</b> Milestone systems grouped by paradigm phase, each phase drawn as the band of years it was active; the Phase&nbsp;II and Phase&nbsp;III bands overlap in 2022&ndash;2024, reflecting two concurrent answers to the generalization gap. Diamonds mark the architectural innovations (action chunking, flow matching, unified tokenization, sparse thinking) that enabled the VLA Turn.</figcaption>
+      </a>
+      <figcaption><b>Evolution timeline (2015&ndash;2026).</b> Milestone systems grouped by paradigm phase, each phase drawn as the band of years it was active; the Phase&nbsp;II and Phase&nbsp;III bands overlap in 2022&ndash;2024, reflecting two concurrent answers to the generalization gap. Diamonds mark the architectural innovations (action chunking, flow matching, unified tokenization, sparse thinking) that enabled the VLA Turn.<span class="zoomtag">Click to enlarge &#8599;</span></figcaption>
     </figure>
     <div class="tabs" id="phase-tabs"></div>
     <div class="cards" id="agent-cards"></div>
@@ -164,9 +254,28 @@
       </table>
     </div>
     <figure>
+      <a class="zoom" href="assets/pareto_frontier.png" data-caption="Figure — Where each paradigm sits on the latency–generalization plane">
       <img src="assets/pareto_frontier.png" alt="Where each paradigm sits on the latency–generalization plane">
-      <figcaption><b>A judged design space, not a measured result.</b> Each paradigm placed by the rubric's real-time and transfer scores. The shaded VLA-only zone (top right) marks the Pareto frontier first occupied by SIMA&nbsp;2, Game-TARS, and Lumine &mdash; the discontinuity that defines the VLA Turn.</figcaption>
+      </a>
+      <figcaption><b>A judged design space, not a measured result.</b> Each paradigm placed by the rubric's real-time and transfer scores. The shaded VLA-only zone (top right) marks the Pareto frontier first occupied by SIMA&nbsp;2, Game-TARS, and Lumine &mdash; the discontinuity that defines the VLA Turn.<span class="zoomtag">Click to enlarge &#8599;</span></figcaption>
     </figure>
+  </section>
+
+  <!-- ── Reading room ──────────────────────────────────────────────────── -->
+  <section id="reading">
+    <div class="eyebrow">Reading room</div>
+    <h2>Follow your curiosity</h2>
+    <p class="lede">The survey screened 2,785 candidates and retained 1,327 papers &mdash; every one reviewed and tagged by paradigm phase, quality tier, method, and venue. Search them right here, or open the full catalog for filters and sorting.</p>
+    <div class="room">
+      <div class="rrow0">
+        <input type="search" id="room-q" placeholder="Search 1,327 papers &mdash; title, venue, or method (e.g. Minecraft, world model, NeurIPS)" disabled>
+        <a class="sbtn" href="papers.html">Full catalog</a>
+        <a class="sbtn" href="mailto:hengchang.hu@oc.netease.com?subject=%5BCatalog%5D%20correction">Suggest a paper</a>
+      </div>
+      <p class="rempty" id="room-count">Loading the catalog&hellip;</p>
+      <div id="room-list"></div>
+    </div>
+    <p class="tnote" style="border:0;background:none;padding-left:0">Found a missing paper, a wrong venue, or a phase tag that looks off? Corrections are welcome by email, or as an issue once the repository is public.</p>
   </section>
 
   <!-- ── Repository ────────────────────────────────────────────────────── -->
@@ -182,6 +291,7 @@
       <a class="repo" href="https://github.com/HoldenHu/GameVLA-Survey/tree/main/benchmarks"><b>benchmarks/</b><span>Five-tier benchmark hierarchy (KDG, TDR) + process diagnostics</span></a>
       <a class="repo" href="https://github.com/HoldenHu/GameVLA-Survey/tree/main/bib"><b>bib/</b><span>Verified BibTeX: 241 cited works, every ID checked against arXiv</span></a>
     </div>
+    <p class="tnote" style="border:0;background:none;padding-left:0">Code and data are released with the paper &mdash; the repository links above go live at that point.</p>
   </section>
 
   <!-- ── Citation ──────────────────────────────────────────────────────── -->
