@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planning to Playing — A Diagnostic Survey of the VLA Turn in Game Agents</title>
+<meta name="description" content="A diagnostic survey of game Vision-Language-Action agents: a four-phase taxonomy, the architecture stack, and original falsification experiments under one real-time game clock.">
+<link rel="icon" href="assets/title_icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<noscript>
+  <div class="wrap" style="padding-top:14px">
+    <p class="tnote" style="border:0;background:none;padding-left:0;margin:0">
+      The taxonomy explorer, the rubric table, and the paper catalog are rendered from JSON with
+      JavaScript. Enable JavaScript, or browse the same data in the
+      <a href="https://github.com/HoldenHu/GameVLA-Survey">repository</a>.
+    </p>
+  </div>
+</noscript>
+
+<header class="topbar">
+  <div class="wrap">
+    <img class="icon" src="assets/title_icon.png" alt="">
+    <span class="wordmark">GameVLA Survey</span>
+    <span class="spacer"></span>
+    <nav>
+      <a href="#summary">Summary</a>
+      <a href="#result">Headline result</a>
+      <a href="#taxonomy">Taxonomy</a>
+      <a href="#rubric">Rubric</a>
+      <a href="papers.html">Catalog</a>
+      <a href="#citation">Cite</a>
+    </nav>
+  </div>
+  <div class="phase-strip" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</header>
+
+<!-- ── Hero ────────────────────────────────────────────────────────────── -->
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Diagnostic Survey &middot; 2026</div>
+    <h1>Planning to Playing: A Diagnostic Survey of the VLA Turn in Game Agents</h1>
+    <p class="subtitle">The first survey to pair every core architectural claim about game Vision-Language-Action agents with an original falsification experiment — grading the evidence, including where it is weak.</p>
+    <p class="authors"><a href="https://github.com/HoldenHu">Hengchang Hu</a></p>
+    <p class="affil">NetEase Fuxi AI SG Lab &middot; Singapore &middot; hengchang.hu@oc.netease.com</p>
+    <div class="btnrow">
+      <a class="btn ghost" href="#" aria-disabled="true">arXiv &mdash; coming soon</a>
+      <a class="btn" href="https://github.com/HoldenHu/GameVLA-Survey">Code &amp; data</a>
+      <a class="btn ghost" href="papers.html">Interactive catalog &rarr;</a>
+      <a class="btn ghost" href="#citation">BibTeX</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ── Stats ─────────────────────────────────────────────────────────── -->
+  <div class="stats">
+    <div class="stat"><b>4</b><span>paradigm phases, one conflict</span></div>
+    <div class="stat"><b>241</b><span>cited works, every entry checked</span></div>
+    <div class="stat"><b>1,327</b><span>catalogued papers</span></div>
+    <div class="stat"><b>30</b><span>agents in the grand taxonomy</span></div>
+    <div class="stat"><b>14 &times; 6</b><span>rubric agents &times; dimensions</span></div>
+  </div>
+
+  <!-- ── In 90 seconds ─────────────────────────────────────────────────── -->
+  <section id="summary">
+    <div class="eyebrow">The short version</div>
+    <h2>The paper, in 90 seconds</h2>
+    <p class="lede">Four moves: locate the conflict that drives the field, measure one representative agent under a clock that actually costs latency, isolate the mechanism behind the failure, and grade every claim by the strength of its evidence.</p>
+    <div class="beats">
+      <div class="beat p1">
+        <div class="n">1</div>
+        <h3>Four phases, one conflict</h3>
+        <p>RL Specialists &rarr; LLM Planners &rarr; Early VLMs &rarr; VLA Generalists. Each phase is an answer to the same latent conflict — intelligence versus latency — and each answer pays a different price.</p>
+      </div>
+      <div class="beat p2">
+        <div class="n">2</div>
+        <h3>One clock, head-to-head</h3>
+        <p>Most VLM game evaluations let the emulator wait for the model. Under our real-time harness the same GPT-4o falls below random on Pong, while a 30M distilled policy holds the full 14.4&nbsp;Hz cadence.</p>
+      </div>
+      <div class="beat p3">
+        <div class="n">3</div>
+        <h3>The failure is the clock</h3>
+        <p>Throttle a competent PPO teacher below &sim;9&nbsp;Hz and it too collapses toward random. The bottleneck is stale actions, not checkpoint quality.</p>
+      </div>
+      <div class="beat p4">
+        <div class="n">4</div>
+        <h3>Claims carry grades</h3>
+        <p>Every core claim is rated by evidential strength; the modality and knowing&ndash;doing pilots are marked plausible-but-unproven rather than allowed to outrun the data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Headline result ───────────────────────────────────────────────── -->
+  <section id="result">
+    <div class="eyebrow">Diagnostic experiment</div>
+    <h2>The headline result: a score without a clock cannot separate latency from skill</h2>
+    <p class="lede">We re-evaluate representative agents under one real-time protocol — fixed wall-clock FPS with stale-action repeat — on three Atari titles, pooling 3 seeds &times; 5 episodes per cell.</p>
+
+    <figure>
+      <img src="assets/pareto_realtime.png" alt="Real-time head-to-head: effective control frequency versus normalized score">
+      <figcaption><b>Real-time head-to-head.</b> <i>x</i>: effective control frequency (log scale). <i>y</i>: score normalized per game (0 = random, 1 = PPO teacher), with bootstrap 95% CIs. The VLM cluster (GPT-4o, 0.6&ndash;0.8&nbsp;Hz) sits below the random level on Pong and near random on Breakout. VA-30M (14.4&nbsp;Hz) reaches 0.99 [0.92, 1.06] on Pong and 0.25 [0.24, 0.26] on Breakout, and matches its teacher at SpaceInvaders' deterministic saturation point (hollow marker: ceiling match, non-discriminative). The gray dashed curve is the spine: the PPO teacher itself, throttled from 15 to 1&nbsp;Hz, collapsing toward random.</figcaption>
+    </figure>
+
+    <div class="tablecard">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th><th>Params</th>
+            <th class="num">Pong &uarr;</th><th class="num">SpaceInvaders &uarr;</th>
+            <th class="num">Breakout &uarr;</th><th class="num">Eff.&nbsp;Hz</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>GPT-4o (vision)</td><td>undisclosed</td><td class="num">&minus;21.0&thinsp;&plusmn;&thinsp;0.0</td><td class="num">267.7&thinsp;&plusmn;&thinsp;38.8</td><td class="num">2.0&thinsp;&plusmn;&thinsp;1.3</td><td class="num">0.6&ndash;0.8</td></tr>
+          <tr><td>Qwen3-VL-4B VLA (LoRA, BC)<sup>&dagger;</sup></td><td>4B</td><td class="num">&minus;16.3</td><td class="num">158.3</td><td class="num">0.0</td><td class="num">7.4</td></tr>
+          <tr><td>Random</td><td>&mdash;</td><td class="num">&minus;17.9&thinsp;&plusmn;&thinsp;3.3</td><td class="num">158.3&thinsp;&plusmn;&thinsp;116.5</td><td class="num">1.1&thinsp;&plusmn;&thinsp;0.8</td><td class="num">14.9</td></tr>
+          <tr class="hl"><td>VA-30M (BC on teacher demos)</td><td>30M</td><td class="num">5.1&thinsp;&plusmn;&thinsp;3.2</td><td class="num">505.0&thinsp;&plusmn;&thinsp;0.0<sup>&Dagger;</sup></td><td class="num">12.0&thinsp;&plusmn;&thinsp;0.0<sup>&sect;</sup></td><td class="num">14.4</td></tr>
+          <tr><td>PPO teacher (oracle)</td><td>1.7M</td><td class="num">5.5&thinsp;&plusmn;&thinsp;1.3</td><td class="num">505.0&thinsp;&plusmn;&thinsp;0.0<sup>&Dagger;</sup></td><td class="num">45.0&thinsp;&plusmn;&thinsp;0.0<sup>&sect;</sup></td><td class="num">14.6</td></tr>
+        </tbody>
+      </table>
+      <div class="tnote">Pong rewards are net points against the built-in opponent (positive = winning); SpaceInvaders and Breakout rewards are game points. Normalized scores: 0 = random, 1 = teacher. <sup>&dagger;</sup>Single-seed point estimates under the original harness protocol, outside the 3-seed matrix. <sup>&Dagger;</sup><sup>&sect;</sup>Mechanically, not statistically, zero-variance cells (deterministic saturation / no-op-invariant prefix). VA-30M has no language input and is not evaluated for instruction following or cross-game transfer.</div>
+    </div>
+
+    <div class="callout">
+      <h3>The protocol is the finding</h3>
+      <p>Under a <i>blocking</i> protocol — the emulator waits for the model — GPT-4o scores 0.0 on all three titles, and inference latency never costs a point. Under the real-time harness the same model lands below random on Pong (&minus;0.13 normalized) and near random on Breakout (0.02). Evaluation protocol is not a detail of the method; it is part of the claim.</p>
+    </div>
+  </section>
+
+  <!-- ── Taxonomy ──────────────────────────────────────────────────────── -->
+  <section id="taxonomy">
+    <div class="eyebrow">Grand taxonomy</div>
+    <h2>30 agents across four phases</h2>
+    <p class="lede">Every system in the taxonomy is scored on the same interface commitments: backbone, input modality, reasoning, action space, control policy, and latency. Select a phase.</p>
+    <figure>
+      <img src="assets/timeline.png" alt="Game VLA evolution timeline 2015–2026, milestone systems grouped by paradigm phase">
+      <figcaption><b>Evolution timeline (2015&ndash;2026).</b> Milestone systems grouped by paradigm phase, each phase drawn as the band of years it was active; the Phase&nbsp;II and Phase&nbsp;III bands overlap in 2022&ndash;2024, reflecting two concurrent answers to the generalization gap. Diamonds mark the architectural innovations (action chunking, flow matching, unified tokenization, sparse thinking) that enabled the VLA Turn.</figcaption>
+    </figure>
+    <div class="tabs" id="phase-tabs"></div>
+    <div class="cards" id="agent-cards"></div>
+    <p class="tnote" style="border:0;background:none;padding-left:0">Source: <a href="https://github.com/HoldenHu/GameVLA-Survey/blob/main/taxonomy/taxonomy.json">taxonomy/taxonomy.json</a> &middot; rendered from the paper's own data file.</p>
+  </section>
+
+  <!-- ── Rubric ────────────────────────────────────────────────────────── -->
+  <section id="rubric">
+    <div class="eyebrow">Capability rubric</div>
+    <h2>14 flagship agents &times; 6 dimensions</h2>
+    <p class="lede">Scored by the author from evidence reported in the original publications (0&ndash;5, protocol in the appendix), backing 84 evidence records shipped in the repository. The paradigm comparison in the paper is a qualitative design space built on these scores &mdash; not a measured result.</p>
+    <div class="tablecard" style="overflow-x:auto">
+      <table id="rubric-table">
+        <thead>
+          <tr>
+            <th>Agent</th><th>Phase</th>
+            <th>Generalization</th><th>Real-time</th><th>Language</th>
+            <th>Perception</th><th>Training eff.</th><th>Transfer</th>
+            <th class="num">Overall</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <figure>
+      <img src="assets/pareto_frontier.png" alt="Where each paradigm sits on the latency–generalization plane">
+      <figcaption><b>A judged design space, not a measured result.</b> Each paradigm placed by the rubric's real-time and transfer scores. The shaded VLA-only zone (top right) marks the Pareto frontier first occupied by SIMA&nbsp;2, Game-TARS, and Lumine &mdash; the discontinuity that defines the VLA Turn.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ── Repository ────────────────────────────────────────────────────── -->
+  <section id="repo">
+    <div class="eyebrow">Repository</div>
+    <h2>Everything behind the paper</h2>
+    <p class="lede">Code, data, and artifacts are released together: the real-time harness, the taxonomy, the catalog, and the full rubric evidence — negative findings included.</p>
+    <div class="repos">
+      <a class="repo" href="https://github.com/HoldenHu/GameVLA-Survey/tree/main/experiments"><b>experiments/</b><span>Real-time harness, the 3-seed matrix, oracle-throttling ablation, and the honest negative findings</span></a>
+      <a class="repo" href="https://github.com/HoldenHu/GameVLA-Survey/tree/main/taxonomy"><b>taxonomy/</b><span>30-agent grand taxonomy across the four paradigm phases</span></a>
+      <a class="repo" href="https://github.com/HoldenHu/GameVLA-Survey/tree/main/scoring"><b>scoring/</b><span>14-agent capability rubric + scores, with 84 evidence records</span></a>
+      <a class="repo" href="https://github.com/HoldenHu/GameVLA-Survey/tree/main/datasets"><b>datasets/</b><span>Data-engine eras: self-play, IDM pseudo-labeling, world models</span></a>
+      <a class="repo" href="https://github.com/HoldenHu/GameVLA-Survey/tree/main/benchmarks"><b>benchmarks/</b><span>Five-tier benchmark hierarchy (KDG, TDR) + process diagnostics</span></a>
+      <a class="repo" href="https://github.com/HoldenHu/GameVLA-Survey/tree/main/bib"><b>bib/</b><span>Verified BibTeX: 241 cited works, every ID checked against arXiv</span></a>
+    </div>
+  </section>
+
+  <!-- ── Citation ──────────────────────────────────────────────────────── -->
+  <section id="citation" class="tight">
+    <div class="eyebrow">Citation</div>
+    <h2>Cite this survey</h2>
+    <pre class="code" id="bibtex"><button class="copybtn" id="copybtn" type="button">Copy</button><code>@article{hu2026planning,
+  title   = {Planning to Playing: A Diagnostic Survey of the
+             {VLA} Turn in Game Agents},
+  author  = {Hu, Hengchang},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</code></pre>
+    <p class="tnote" style="border:0;background:none;padding-left:0">A machine-readable <a href="https://github.com/HoldenHu/GameVLA-Survey/blob/main/CITATION.cff">CITATION.cff</a> is included in the repository.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Hengchang Hu &middot; NetEase Fuxi AI SG Lab</span>
+    <span>Paper CC&nbsp;BY&nbsp;4.0 &middot; Code MIT</span>
+    <span><a href="https://github.com/HoldenHu/GameVLA-Survey">GitHub</a></span>
+    <span><a href="papers.html">Paper catalog</a></span>
+  </div>
+</footer>
+
+<script>
+/* ── Phase palettes ─────────────────────────────────────────────────── */
+const C = { rl:'var(--phase-rl)', llm:'var(--phase-llm)', vlm:'var(--phase-vlm)', vla:'var(--phase-vla)' };
+const PH_TAX = {
+  'I. RL Specialists':      { c:C.rl,  s:'I · RL Specialists' },
+  'II. LLM Planners':       { c:C.llm, s:'II · LLM Planners' },
+  'III. Transitional VLMs': { c:C.vlm, s:'III · Early VLMs' },
+  'IV. VLA Generalists':    { c:C.vla, s:'IV · VLA Generalists' }
+};
+const PH_SCORE = { 'I. RL':C.rl, 'II. LLM':C.llm, 'III. VLM':C.vlm, 'IV. VLA':C.vla };
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
+
+/* ── Taxonomy explorer ──────────────────────────────────────────────── */
+fetch('data/taxonomy_web.json').then(r => r.json()).then(rows => {
+  const tabs = document.getElementById('phase-tabs');
+  const cards = document.getElementById('agent-cards');
+  const phases = Object.keys(PH_TAX);
+
+  function show(phase) {
+    [...tabs.children].forEach(t => t.classList.toggle('on', t.dataset.ph === phase));
+    cards.innerHTML = rows.filter(r => r.phase === phase).map(r => {
+      const p = PH_TAX[r.phase] || { c:'var(--ink)' };
+      return `<div class="acard" style="--pc:${p.c}">
+        <div class="head"><span class="name">${esc(r.agent)}</span><span class="yr">${esc(r.year)}</span></div>
+        <dl>
+          <dt>Backbone</dt><dd>${esc(r.backbone)}</dd>
+          <dt>Input</dt><dd>${esc(r.input_modality)}</dd>
+          <dt>Reasoning</dt><dd>${esc(r.reasoning)}</dd>
+          <dt>Action</dt><dd>${esc(r.action_space)}</dd>
+          <dt>Control</dt><dd>${esc(r.control_policy)}</dd>
+          <dt>Latency</dt><dd>${esc(r.latency)}</dd>
+        </dl>
+      </div>`;
+    }).join('');
+  }
+
+  tabs.innerHTML = phases.map((ph, i) =>
+    `<button class="tab${i === phases.length - 1 ? ' on' : ''}" data-ph="${esc(ph)}" style="--tabc:${(PH_TAX[ph] || {}).c}">${esc((PH_TAX[ph] || {}).s)}</button>`
+  ).join('');
+  [...tabs.children].forEach(t => t.addEventListener('click', () => show(t.dataset.ph)));
+  show(phases[phases.length - 1]);
+}).catch(() => {
+  document.getElementById('agent-cards').innerHTML =
+    '<p class="tnote" style="border:0;background:none;padding-left:0">Could not load <code>data/taxonomy_web.json</code> &mdash; the data file ships in the repository.</p>';
+});
+
+/* ── Rubric table with dimension bars ───────────────────────────────── */
+fetch('data/scores_web.json').then(r => r.json()).then(rows => {
+  const DIMS = [
+    ['generalization', 'Generalization'], ['realtime_control', 'Real-time'],
+    ['language_reasoning', 'Language'], ['visual_perception', 'Perception'],
+    ['training_efficiency', 'Training eff.'], ['cross_game_transfer', 'Transfer']
+  ];
+  rows.sort((a, b) => b.overall - a.overall);
+  document.querySelector('#rubric-table tbody').innerHTML = rows.map(r => {
+    const c = PH_SCORE[r.phase] || 'var(--ink)';
+    const bars = DIMS.map(([k]) => {
+      const v = Number(r[k]) || 0;
+      return `<td><span class="dimbar" style="--pc:${c}" title="${v.toFixed(1)} / 5"><i style="width:${Math.round(v / 5 * 100)}%"></i></span></td>`;
+    }).join('');
+    return `<tr>
+      <td><b>${esc(r.agent)}</b></td>
+      <td><span style="color:${c};font-weight:600">${esc(r.phase)}</span></td>
+      ${bars}
+      <td class="num"><b>${(Number(r.overall) || 0).toFixed(2)}</b></td>
+    </tr>`;
+  }).join('');
+}).catch(() => {
+  document.querySelector('#rubric-table tbody').innerHTML =
+    '<tr><td colspan="9">Could not load <code>data/scores_web.json</code> &mdash; the data file ships in the repository.</td></tr>';
+});
+
+/* ── BibTeX copy ────────────────────────────────────────────────────── */
+document.getElementById('copybtn').addEventListener('click', () => {
+  const txt = document.querySelector('#bibtex code').innerText;
+  navigator.clipboard.writeText(txt).then(() => {
+    const b = document.getElementById('copybtn');
+    b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 1500);
+  });
+});
+</script>
+</body>
+</html>

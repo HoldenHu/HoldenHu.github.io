@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper Catalog — GameVLA Survey</title>
+<link rel="icon" href="assets/title_icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Page-specific: dense catalog table + filter controls */
+  .controls {
+    position: sticky; top: 59px; z-index: 40;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 0 10px; margin-bottom: 6px;
+  }
+  .crow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .crow:last-child { margin-bottom: 0; }
+  .crow .label { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); font-weight: 700; margin-right: 2px; }
+  input[type=search] {
+    flex: 1; min-width: 240px; padding: 9px 13px;
+    border: 1px solid var(--line); border-radius: 8px;
+    font: inherit; font-size: 0.9rem; color: var(--ink); background: var(--bg);
+  }
+  input[type=search]:focus { outline: none; border-color: var(--ink); }
+  .chip {
+    border: 1px solid var(--line); background: var(--bg); border-radius: 999px;
+    padding: 5px 13px; font: inherit; font-size: 0.8rem; font-weight: 600;
+    color: var(--muted); cursor: pointer; user-select: none;
+  }
+  .chip:hover { border-color: var(--faint); color: var(--ink); }
+  .chip.on { background: var(--chipc, var(--ink)); border-color: var(--chipc, var(--ink)); color: #fff; }
+  table.cat { font-size: 0.85rem; }
+  table.cat th { cursor: pointer; white-space: nowrap; }
+  table.cat th:hover { color: var(--ink); }
+  table.cat td { padding: 8px 12px; }
+  td.t a { color: var(--ink); }
+  td.t a:hover { color: var(--phase-vla); text-decoration: none; }
+  .tag {
+    display: inline-block; font-size: 0.72rem; padding: 1px 8px; border-radius: 999px;
+    margin: 1px 3px 1px 0; background: var(--bg-soft); border: 1px solid var(--line-soft); color: var(--muted);
+  }
+  .tag.core { background: var(--ink); border-color: var(--ink); color: #fff; font-weight: 600; }
+  .ph-tag { display: inline-block; font-size: 0.74rem; font-weight: 600; padding: 1px 9px; border-radius: 999px; color: #fff; white-space: nowrap; }
+  .q { font-weight: 700; }
+  .q.A { color: #1e9e58; } .q.B { color: #c96a12; } .q.C { color: var(--faint); }
+  .arxiv { font-size: 0.76rem; color: var(--muted); font-family: var(--mono); }
+  .arxiv:hover { color: var(--ink); text-decoration: none; }
+  #count { font-size: 0.82rem; color: var(--muted); margin: 10px 0 6px; }
+  #more { margin: 22px auto 0; }
+  .morewrap { display: flex; justify-content: center; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <img class="icon" src="assets/title_icon.png" alt="">
+    <span class="wordmark">GameVLA Survey</span>
+    <span class="spacer"></span>
+    <nav>
+      <a href="index.html#summary">Summary</a>
+      <a href="index.html#result">Headline result</a>
+      <a href="index.html#taxonomy">Taxonomy</a>
+      <a href="index.html#rubric">Rubric</a>
+      <a href="papers.html" style="color:var(--ink)">Catalog</a>
+      <a href="https://github.com/HoldenHu/GameVLA-Survey">GitHub</a>
+    </nav>
+  </div>
+  <div class="phase-strip" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</header>
+
+<div class="wrap" style="padding-top:34px">
+
+  <h2>Paper Catalog</h2>
+  <p class="lede">Every paper screened during the survey's two-stage search &mdash; 2,785 candidates, 1,327 retained after screening and individually reviewed, tagged by phase, quality, method, and venue. The 315 <span class="tag core">core</span> entries are the works the survey directly builds on; the rest form the wider context.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="controls" style="margin-top:22px">
+    <div class="crow">
+      <input type="search" id="q" placeholder="Search title / venue / method…  (e.g. Minecraft, VLA, NeurIPS, world model)">
+    </div>
+    <div class="crow">
+      <span class="label">Tier</span>
+      <span class="chip on" data-k="all">All</span>
+      <span class="chip" data-k="core">★ keep_core</span>
+      <span class="chip" data-k="catalog">keep_catalog</span>
+      <span class="label" style="margin-left:10px">Quality</span>
+      <span class="chip on" data-q="all">All</span>
+      <span class="chip" data-q="A">A</span>
+      <span class="chip" data-q="B">B</span>
+      <span class="chip" data-q="C">C</span>
+      <span class="label" style="margin-left:10px">Phase</span>
+      <span class="chip on" data-ph="all">All</span>
+      <span class="chip" data-ph="IV-VLA" style="--chipc:var(--phase-vla)">IV · VLA</span>
+      <span class="chip" data-ph="III-VLM" style="--chipc:var(--phase-vlm)">III · VLM</span>
+      <span class="chip" data-ph="II-LLM" style="--chipc:var(--phase-llm)">II · LLM</span>
+      <span class="chip" data-ph="I-RL" style="--chipc:var(--phase-rl)">I · RL</span>
+      <span class="chip" data-ph="NA">n/a</span>
+    </div>
+  </div>
+
+  <div id="count"></div>
+  <div class="tablecard">
+    <table class="cat">
+      <thead><tr>
+        <th data-sort="t">Title</th><th data-sort="y">Year</th><th data-sort="v">Venue</th>
+        <th data-sort="ph">Phase</th><th data-sort="q">Q</th><th>Methods</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div class="morewrap"><button id="more" class="btn ghost" type="button">Show more</button></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Hengchang Hu &middot; NetEase Fuxi AI SG Lab</span>
+    <span>Paper CC&nbsp;BY&nbsp;4.0 &middot; Code MIT</span>
+    <span><a href="index.html">&larr; Project page</a></span>
+    <span><a href="https://github.com/HoldenHu/GameVLA-Survey">GitHub</a></span>
+  </div>
+</footer>
+
+<script>
+const P = [];
+let filtered = [], shown = 0, per = 100;
+let k = 'all', q = 'all', ph = 'all', query = '';
+let sortKey = 'y', sortDir = -1;
+
+const PH_COLOR = { 'IV-VLA':'var(--phase-vla)', 'III-VLM':'var(--phase-vlm)',
+                   'II-LLM':'var(--phase-llm)', 'I-RL':'var(--phase-rl)', 'NA':'var(--faint)' };
+
+fetch('data/papers_web.json').then(r => r.json()).then(d => { P.push(...d); init(); })
+  .catch(() => { document.getElementById('count').textContent =
+    'Could not load data/papers_web.json — the catalog file ships with the repository.'; });
+fetch('data/stats_web.json').then(r => r.json()).then(renderStats);
+
+function renderStats(s) {
+  const el = document.getElementById('stats');
+  const items = [
+    ['Catalogued papers', s.n_total], ['keep_core', s.n_core], ['keep_catalog', s.n_catalog],
+    ['A quality', s.quality.A || 0], ['Phase IV · VLA', s.phase['IV-VLA'] || 0], ['with arXiv', s.n_pdf]
+  ];
+  el.innerHTML = items.map(([l, v]) => `<div class="stat"><b>${v.toLocaleString()}</b><span>${l}</span></div>`).join('');
+}
+
+function applyFilters() {
+  filtered = P.filter(p => {
+    if (k === 'core' && !p.k) return false;
+    if (k === 'catalog' && p.k) return false;
+    if (q !== 'all' && p.q !== q) return false;
+    if (ph !== 'all' && p.ph !== ph) return false;
+    if (query) {
+      const blob = (p.t + ' ' + (p.v || '') + ' ' + (p.m || []).join(' ')).toLowerCase();
+      if (!blob.includes(query)) return false;
+    }
+    return true;
+  });
+  filtered.sort((a, b) => {
+    let va = a[sortKey], vb = b[sortKey];
+    if (sortKey === 'y') { va = +String(va).slice(0, 4); vb = +String(vb).slice(0, 4); }
+    if (sortKey === 'q') { const o = { A: 0, B: 1, C: 2 }; va = o[va] ?? 3; vb = o[vb] ?? 3; }
+    return (va < vb ? -1 : va > vb ? 1 : 0) * sortDir;
+  });
+  shown = 0;
+  document.getElementById('tbody').innerHTML = '';
+  document.getElementById('count').textContent = filtered.length.toLocaleString() + ' papers';
+  render();
+}
+
+function render() {
+  const tb = document.getElementById('tbody');
+  const slice = filtered.slice(shown, shown + per);
+  shown += slice.length;
+  tb.insertAdjacentHTML('beforeend', slice.map(p => {
+    const title = p.t || '';
+    const aid = p.a ? `<a class="arxiv" href="https://arxiv.org/abs/${p.a}" target="_blank" rel="noopener">arXiv:${p.a}</a>` : '';
+    const methods = (p.m || []).slice(0, 5).map(m => `<span class="tag">${esc(m)}</span>`).join('');
+    const tier = p.k ? '<span class="tag core">core</span>' : '';
+    const phc = PH_COLOR[p.ph] || 'var(--faint)';
+    return `<tr>
+      <td class="t"><a href="https://scholar.google.com/scholar?q=${encodeURIComponent(title)}" target="_blank" rel="noopener">${esc(title)}</a> ${tier}<br>${aid}</td>
+      <td>${String(p.y || '').slice(0, 4)}</td>
+      <td>${esc(p.v || '')}</td>
+      <td><span class="ph-tag" style="background:${phc}">${esc(p.ph || 'NA')}</span></td>
+      <td class="q ${esc(p.q || '')}">${esc(p.q || '')}</td>
+      <td>${methods}</td></tr>`;
+  }).join(''));
+  document.getElementById('more').style.display = shown < filtered.length ? '' : 'none';
+}
+function esc(s) { const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
+
+function init() {
+  document.getElementById('q').addEventListener('input', e => { query = e.target.value.trim().toLowerCase(); applyFilters(); });
+  document.querySelectorAll('[data-k]').forEach(c => c.addEventListener('click', () => {
+    document.querySelectorAll('[data-k]').forEach(x => x.classList.remove('on'));
+    c.classList.add('on'); k = c.dataset.k; applyFilters(); }));
+  document.querySelectorAll('[data-q]').forEach(c => c.addEventListener('click', () => {
+    document.querySelectorAll('[data-q]').forEach(x => x.classList.remove('on'));
+    c.classList.add('on'); q = c.dataset.q; applyFilters(); }));
+  document.querySelectorAll('[data-ph]').forEach(c => c.addEventListener('click', () => {
+    document.querySelectorAll('[data-ph]').forEach(x => x.classList.remove('on'));
+    c.classList.add('on'); ph = c.dataset.ph; applyFilters(); }));
+  document.querySelectorAll('th[data-sort]').forEach(th => th.addEventListener('click', () => {
+    sortKey = th.dataset.sort; sortDir = -sortDir; applyFilters(); }));
+  document.getElementById('more').addEventListener('click', render);
+  applyFilters();
+}
+</script>
+</body>
+</html>

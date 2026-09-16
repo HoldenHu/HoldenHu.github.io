@@ -1,0 +1,259 @@
+/* ==========================================================================
+   GameVLA Survey — shared design system
+   Light editorial theme. Flat surfaces, no gradients, no shadows.
+   Palette: navy ink (from the paper's text color system) + the four
+   phase colors used by every figure and table in the paper.
+   ========================================================================== */
+
+:root {
+  --ink:        #14233a;   /* navy — headings, primary text        */
+  --body:       #2b3a4f;   /* body copy                            */
+  --muted:      #5b6b81;   /* captions, labels                     */
+  --faint:      #8a97a8;
+  --bg:         #ffffff;
+  --bg-soft:    #f7f9fc;
+  --line:       #e3e8ef;
+  --line-soft:  #eef2f7;
+
+  /* Phase colors — identical to the LaTeX \definecolor phase* values */
+  --phase-rl:   #4A90D9;   /* Phase I   RL Specialists     */
+  --phase-llm:  #2ECC71;   /* Phase II  LLM Planners       */
+  --phase-vlm:  #E67E22;   /* Phase III Early VLMs         */
+  --phase-vla:  #E74C3C;   /* Phase IV  VLA Generalists    */
+
+  --serif: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  --wrap: 1000px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--body);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ink); text-decoration: none; }
+a:hover { text-decoration: underline; text-decoration-color: var(--phase-rl); }
+img { max-width: 100%; height: auto; display: block; }
+code, pre { font-family: var(--mono); }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+
+/* ── Top bar ─────────────────────────────────────────────────────────── */
+
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .wrap {
+  display: flex; align-items: center; gap: 12px;
+  height: 56px;
+}
+.topbar img.icon { width: 26px; height: 26px; border-radius: 6px; }
+.topbar .wordmark {
+  font-family: var(--serif); font-size: 1rem; font-weight: 700;
+  color: var(--ink); letter-spacing: 0.01em; white-space: nowrap;
+}
+.topbar .spacer { flex: 1; }
+.topbar nav { display: flex; gap: 18px; align-items: center; }
+.topbar nav a { font-size: 0.86rem; color: var(--muted); }
+.topbar nav a:hover { color: var(--ink); text-decoration: none; }
+
+/* Flat four-color phase strip — the site's signature rule */
+.phase-strip { display: flex; height: 3px; width: 100%; }
+.phase-strip i { flex: 1; }
+.phase-strip i:nth-child(1) { background: var(--phase-rl); }
+.phase-strip i:nth-child(2) { background: var(--phase-llm); }
+.phase-strip i:nth-child(3) { background: var(--phase-vlm); }
+.phase-strip i:nth-child(4) { background: var(--phase-vla); }
+
+/* ── Hero ────────────────────────────────────────────────────────────── */
+
+.hero { background: var(--bg-soft); border-bottom: 1px solid var(--line); padding: 56px 0 44px; }
+.hero .eyebrow {
+  font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--phase-vla); margin-bottom: 14px;
+}
+.hero h1 {
+  font-family: var(--serif); font-weight: 700; color: var(--ink);
+  font-size: clamp(1.65rem, 4vw, 2.5rem); line-height: 1.2;
+  max-width: 21ch; margin-bottom: 16px;
+}
+.hero .subtitle { font-size: 1.02rem; color: var(--muted); max-width: 62ch; margin-bottom: 20px; }
+.hero .authors { font-size: 0.95rem; color: var(--body); margin-bottom: 4px; }
+.hero .authors a { color: var(--ink); font-weight: 600; }
+.hero .affil { font-size: 0.88rem; color: var(--muted); margin-bottom: 22px; }
+
+.btnrow { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 17px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;
+  border: 1px solid var(--ink); background: var(--ink); color: #fff;
+}
+.btn:hover { text-decoration: none; opacity: 0.88; }
+.btn.ghost { background: var(--bg); color: var(--ink); border-color: var(--line); }
+.btn.ghost:hover { border-color: var(--ink); opacity: 1; }
+.btn[aria-disabled="true"] { opacity: 0.55; pointer-events: none; }
+
+/* ── Sections ────────────────────────────────────────────────────────── */
+
+section { padding: 52px 0 8px; }
+section.tight { padding-top: 34px; }
+section + section { padding-top: 44px; }
+
+h2 {
+  font-family: var(--serif); font-weight: 700; color: var(--ink);
+  font-size: clamp(1.3rem, 2.6vw, 1.65rem); line-height: 1.25;
+  margin-bottom: 10px;
+}
+h3 { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 6px; }
+.lede { font-size: 1rem; color: var(--muted); max-width: 74ch; margin-bottom: 22px; }
+p + p { margin-top: 12px; }
+
+.eyebrow {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--faint); margin-bottom: 8px;
+}
+
+/* ── Stats strip ─────────────────────────────────────────────────────── */
+
+.stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px; background: var(--line); border: 1px solid var(--line);
+  border-radius: 12px; overflow: hidden; margin-top: 26px;
+}
+.stat { background: var(--bg); padding: 16px 18px; }
+.stat b {
+  display: block; font-family: var(--serif); font-size: 1.5rem;
+  color: var(--ink); line-height: 1.15;
+}
+.stat span { font-size: 0.78rem; color: var(--muted); }
+
+/* ── Beat cards ("in 90 seconds") ────────────────────────────────────── */
+
+.beats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.beat { border: 1px solid var(--line); border-radius: 12px; padding: 18px; background: var(--bg); }
+.beat .n {
+  font-family: var(--serif); font-size: 0.85rem; font-weight: 700;
+  color: #fff; background: var(--ink); border-radius: 50%;
+  width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+}
+.beat h3 { font-size: 0.98rem; margin-bottom: 6px; }
+.beat p { font-size: 0.88rem; color: var(--muted); }
+.beat.p1 .n { background: var(--phase-rl); }
+.beat.p2 .n { background: var(--phase-vla); }
+.beat.p3 .n { background: var(--phase-vlm); }
+.beat.p4 .n { background: var(--phase-llm); }
+
+/* ── Callout ─────────────────────────────────────────────────────────── */
+
+.callout {
+  border-left: 3px solid var(--phase-vla);
+  background: var(--bg-soft);
+  padding: 16px 20px; border-radius: 0 10px 10px 0;
+  margin: 20px 0;
+}
+.callout h3 { margin-bottom: 4px; }
+.callout p { font-size: 0.92rem; color: var(--body); }
+
+/* ── Figures & tables ────────────────────────────────────────────────── */
+
+figure { margin: 22px 0 6px; }
+figure img { border: 1px solid var(--line); border-radius: 10px; }
+figcaption { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+figcaption b { color: var(--ink); }
+
+.tablecard { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin: 20px 0 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+th {
+  text-align: left; padding: 10px 14px; background: var(--bg-soft);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); font-weight: 700; white-space: nowrap;
+}
+th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td { padding: 9px 14px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+tr.hl td { background: #fdf3f1; font-weight: 600; color: var(--ink); }
+.tnote { font-size: 0.78rem; color: var(--muted); padding: 10px 14px; border-top: 1px solid var(--line); background: var(--bg-soft); }
+
+/* ── Phase tabs + agent cards ────────────────────────────────────────── */
+
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.tab {
+  border: 1px solid var(--line); background: var(--bg); border-radius: 999px;
+  padding: 7px 15px; font-size: 0.84rem; font-weight: 600; color: var(--muted);
+  cursor: pointer; user-select: none;
+}
+.tab:hover { border-color: var(--faint); color: var(--ink); }
+.tab.on { color: #fff; border-color: var(--tabc, var(--ink)); background: var(--tabc, var(--ink)); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.acard {
+  border: 1px solid var(--line); border-top: 3px solid var(--pc, var(--ink));
+  border-radius: 10px; padding: 14px 16px; background: var(--bg);
+}
+.acard .head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.acard .name { font-family: var(--serif); font-weight: 700; color: var(--ink); font-size: 0.98rem; }
+.acard .yr { font-size: 0.76rem; color: var(--faint); }
+.acard dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; font-size: 0.8rem; }
+.acard dt { color: var(--faint); white-space: nowrap; }
+.acard dd { color: var(--body); }
+
+/* ── Dimension bars (rubric) ─────────────────────────────────────────── */
+
+.dimbar { display: inline-block; width: 62px; height: 7px; background: var(--line-soft); border-radius: 4px; overflow: hidden; vertical-align: middle; }
+.dimbar i { display: block; height: 100%; background: var(--pc, var(--phase-rl)); }
+
+/* ── Repository grid ─────────────────────────────────────────────────── */
+
+.repos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.repo {
+  display: block; border: 1px solid var(--line); border-radius: 10px;
+  padding: 15px 17px; background: var(--bg);
+}
+.repo:hover { border-color: var(--ink); text-decoration: none; }
+.repo b { display: block; font-family: var(--mono); font-size: 0.85rem; color: var(--ink); margin-bottom: 4px; }
+.repo span { font-size: 0.82rem; color: var(--muted); }
+
+/* ── Code block + citation ───────────────────────────────────────────── */
+
+pre.code {
+  position: relative; background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: 10px; padding: 16px 18px; font-size: 0.82rem; line-height: 1.6;
+  color: var(--ink); overflow-x: auto;
+}
+.copybtn {
+  position: absolute; top: 10px; right: 10px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--muted);
+  border-radius: 6px; padding: 3px 10px; font-size: 0.74rem; cursor: pointer;
+}
+.copybtn:hover { color: var(--ink); border-color: var(--ink); }
+
+/* ── Footer ──────────────────────────────────────────────────────────── */
+
+footer {
+  margin-top: 64px; border-top: 1px solid var(--line);
+  background: var(--bg-soft); padding: 28px 0 40px;
+  font-size: 0.84rem; color: var(--muted);
+}
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; }
+footer a { color: var(--ink); }
+
+@media (max-width: 640px) {
+  .topbar nav { display: none; }
+  .hero { padding: 40px 0 32px; }
+  section { padding-top: 40px; }
+}
