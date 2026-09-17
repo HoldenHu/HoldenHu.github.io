@@ -1,0 +1,519 @@
+{
+  "source": "papers/RAG_Survey/chapters (merged manuscript)",
+  "total": 66,
+  "range": "Q26–Q91",
+  "focal": 51,
+  "open": 15,
+  "groups": [
+    {
+      "key": "design",
+      "chapter": 3,
+      "file": "whole.tex",
+      "title": "System Design and Coordination",
+      "label": "Design & Coordination",
+      "blurb": "From components to working systems: composition, resources, workloads.",
+      "range": "Q26–Q32",
+      "count": 7,
+      "questions": [
+        {
+          "n": 26,
+          "type": "Focal",
+          "label": "q:composition",
+          "text": "How should RAG operations be composed into a complete workflow?",
+          "section": "System-Level Design Space"
+        },
+        {
+          "n": 27,
+          "type": "Focal",
+          "label": "q:coupling",
+          "text": "At which stages and through which interfaces should external knowledge enter the system?",
+          "section": "System-Level Design Space"
+        },
+        {
+          "n": 28,
+          "type": "Focal",
+          "label": "q:scheduling",
+          "text": "How should retrieval and generation be scheduled within and across requests under a shared resource budget?",
+          "section": "System-Level Design Space"
+        },
+        {
+          "n": 29,
+          "type": "Focal",
+          "label": "q:configuration",
+          "text": "Which system configuration best satisfies the task objectives and resource constraints?",
+          "section": "Cross-Component Coordination and End-to-End Optimization"
+        },
+        {
+          "n": 30,
+          "type": "Focal",
+          "label": "q:coordination",
+          "text": "Which components should change, and how should their updates be coordinated?",
+          "section": "Cross-Component Coordination and End-to-End Optimization"
+        },
+        {
+          "n": 31,
+          "type": "Focal",
+          "label": "q:feedback",
+          "text": "How can downstream outcomes provide useful feedback to upstream decisions?",
+          "section": "Cross-Component Coordination and End-to-End Optimization"
+        },
+        {
+          "n": 32,
+          "type": "Focal",
+          "label": "q:conditions",
+          "text": "Which design and optimization choices must change under different knowledge and deployment conditions?",
+          "section": "Cross-Cutting System Variants and Deployment Settings"
+        }
+      ]
+    },
+    {
+      "key": "runtime",
+      "chapter": 4,
+      "file": "agenticRAG.tex",
+      "title": "Agentic RAG: Runtime Control, Memory, and Collaboration",
+      "label": "Runtime Control",
+      "blurb": "When the coordination itself becomes adaptive: search, memory, multi-agent work.",
+      "range": "Q33–Q49",
+      "count": 17,
+      "questions": [
+        {
+          "n": 33,
+          "type": "Focal",
+          "label": "q:agency",
+          "text": "Which retrieval-related decisions are delegated, and what state makes them revisable?",
+          "section": "Defining Agentic RAG"
+        },
+        {
+          "n": 34,
+          "type": "Focal",
+          "label": "q:agent-plan",
+          "text": "How should a controller plan evidence acquisition when subgoals and source capabilities are uncertain?",
+          "section": "Search planning and resource selection"
+        },
+        {
+          "n": 35,
+          "type": "Focal",
+          "label": "q:agent-revise",
+          "text": "How should new observations revise the evidence state and subsequent retrieval actions?",
+          "section": "Iterative retrieval and evidence integration"
+        },
+        {
+          "n": 36,
+          "type": "Focal",
+          "label": "q:agent-stop",
+          "text": "When should search continue, change strategy, abstain, or terminate?",
+          "section": "Search control, verification, and recovery"
+        },
+        {
+          "n": 37,
+          "type": "Focal",
+          "label": "q:agent-memory-role",
+          "text": "What information should persist, for which decisions, and over what lifetime?",
+          "section": "Memory types and roles"
+        },
+        {
+          "n": 38,
+          "type": "Focal",
+          "label": "q:agent-memory-update",
+          "text": "How should memory be written, retrieved, revised, and forgotten as evidence changes?",
+          "section": "Memory construction, retrieval, and update"
+        },
+        {
+          "n": 39,
+          "type": "Focal",
+          "label": "q:agent-memory-use",
+          "text": "How can memory improve current decisions without importing stale, unsupported, or unauthorized assumptions?",
+          "section": "Memory utilization and remaining challenges"
+        },
+        {
+          "n": 40,
+          "type": "Focal",
+          "label": "q:agent-delegate",
+          "text": "When should retrieval-related work be delegated, and how should roles be specialized?",
+          "section": "Roles and collaboration architectures"
+        },
+        {
+          "n": 41,
+          "type": "Focal",
+          "label": "q:agent-communicate",
+          "text": "What should agents exchange, and how should evidence and task state remain consistent?",
+          "section": "Communication and evidence coordination"
+        },
+        {
+          "n": 42,
+          "type": "Focal",
+          "label": "q:agent-reconcile",
+          "text": "How should a team resolve disagreement and assign responsibility for its final claims?",
+          "section": "Aggregation, verification, and remaining challenges"
+        },
+        {
+          "n": 43,
+          "type": "Focal",
+          "label": "q:agent-interface",
+          "text": "Which actions and observations should the runtime expose, and within which authority boundaries?",
+          "section": "Agent harness and runtime components"
+        },
+        {
+          "n": 44,
+          "type": "Focal",
+          "label": "q:agent-execution",
+          "text": "How should the runtime make state transitions, retries, and recovery bounded and auditable?",
+          "section": "Control loops and state management"
+        },
+        {
+          "n": 45,
+          "type": "Focal",
+          "label": "q:agent-observe",
+          "text": "What must be monitored to establish reliable, resource-bounded execution?",
+          "section": "Reliability, efficiency, and observability"
+        },
+        {
+          "n": 46,
+          "type": "Focal",
+          "label": "q:agent-learn-object",
+          "text": "Which stateful decisions should training improve, and over what horizon?",
+          "section": "Learning and Optimizing Agentic RAG"
+        },
+        {
+          "n": 47,
+          "type": "Focal",
+          "label": "q:agent-learn-feedback",
+          "text": "How can trajectory feedback teach useful decisions without rewarding shortcuts or leaking privileged information?",
+          "section": "Learning and Optimizing Agentic RAG"
+        },
+        {
+          "n": 48,
+          "type": "Focal",
+          "label": "q:agent-transfer",
+          "text": "What learned behavior transfers when tools, evidence, and resource budgets change?",
+          "section": "Learning and Optimizing Agentic RAG"
+        },
+        {
+          "n": 49,
+          "type": "Focal",
+          "label": "q:agent-compare",
+          "text": "Which matched comparisons substantiate a claimed agentic capability?",
+          "section": "Comparative Analysis of Agentic RAG Methods"
+        }
+      ]
+    },
+    {
+      "key": "eval",
+      "chapter": 6,
+      "file": "RAG_Evaluation.tex",
+      "title": "Evaluation of RAG: Objects, Quality Dimensions, Settings, and Methods",
+      "label": "Evaluation",
+      "blurb": "What an evaluation claim actually establishes, from source defects to end-to-end success.",
+      "range": "Q50–Q76",
+      "count": 27,
+      "questions": [
+        {
+          "n": 50,
+          "type": "Focal",
+          "label": "q:eval-claim",
+          "text": "What precisely is the evaluation claim, and which observations could support it?",
+          "section": "Organizing RAG Evaluation Research"
+        },
+        {
+          "n": 51,
+          "type": "Focal",
+          "label": "q:eval-source",
+          "text": "Does the available knowledge support the task, and which source defects limit the attainable answer?",
+          "section": "Data and knowledge sources"
+        },
+        {
+          "n": 52,
+          "type": "Focal",
+          "label": "q:eval-retrieval",
+          "text": "How well does retrieval rank useful evidence and assemble a jointly sufficient set?",
+          "section": "Retrieval and reranking"
+        },
+        {
+          "n": 53,
+          "type": "Focal",
+          "label": "q:eval-context",
+          "text": "Was sufficient evidence preserved in the context, and did the generator use it appropriately?",
+          "section": "Context construction and utilization"
+        },
+        {
+          "n": 54,
+          "type": "Focal",
+          "label": "q:eval-response",
+          "text": "Which claims does the response make, and are they correct, supported, and appropriately attributed?",
+          "section": "Generation and response"
+        },
+        {
+          "n": 55,
+          "type": "Focal",
+          "label": "q:eval-system",
+          "text": "What does end-to-end task success reveal, and which failures remain hidden?",
+          "section": "End-to-end systems"
+        },
+        {
+          "n": 56,
+          "type": "Focal",
+          "label": "q:eval-trajectory",
+          "text": "Which states, actions, and interactions must be observed to evaluate a stateful RAG system?",
+          "section": "Agent trajectories, memory, and coordination"
+        },
+        {
+          "n": 57,
+          "type": "Focal",
+          "label": "q:eval-quality",
+          "text": "How should correctness, request relevance, and information coverage be measured without conflating them?",
+          "section": "Correctness, relevance, and completeness"
+        },
+        {
+          "n": 58,
+          "type": "Focal",
+          "label": "q:eval-support",
+          "text": "What exactly does a grounding or attribution score establish about evidence and the answer?",
+          "section": "Faithfulness, groundedness, factuality, and attribution"
+        },
+        {
+          "n": 59,
+          "type": "Focal",
+          "label": "q:eval-robustness",
+          "text": "Which changes should preserve an answer, and which should cause it to change?",
+          "section": "Robustness and stability"
+        },
+        {
+          "n": 60,
+          "type": "Focal",
+          "label": "q:eval-risk",
+          "text": "Which harms or disparities are tested, at what boundary, and against which threat or population model?",
+          "section": "Safety, security, privacy, and fairness"
+        },
+        {
+          "n": 61,
+          "type": "Focal",
+          "label": "q:eval-cost",
+          "text": "What task quality and useful throughput are sustained under specified latency, cost, and load constraints?",
+          "section": "Efficiency, scalability, and human utility"
+        },
+        {
+          "n": 62,
+          "type": "Focal",
+          "label": "q:eval-domain",
+          "text": "Which domain conditions and source assumptions make an evaluation representative of its intended use?",
+          "section": "Domain and knowledge environment"
+        },
+        {
+          "n": 63,
+          "type": "Focal",
+          "label": "q:eval-language",
+          "text": "How should language and cultural coverage be separated from retrieval, generation, and judge performance?",
+          "section": "Language and culture"
+        },
+        {
+          "n": 64,
+          "type": "Focal",
+          "label": "q:eval-modality",
+          "text": "At what evidence granularity should multimodal retrieval, reasoning, and attribution be assessed?",
+          "section": "Modality and document structure"
+        },
+        {
+          "n": 65,
+          "type": "Focal",
+          "label": "q:eval-interaction",
+          "text": "How should dialogue history, user interaction, and answer form enter the evaluation unit?",
+          "section": "Interaction and answer form"
+        },
+        {
+          "n": 66,
+          "type": "Focal",
+          "label": "q:eval-dynamics",
+          "text": "How should changing knowledge and controlled stressors be introduced without changing the claim unnoticed?",
+          "section": "Knowledge dynamics and controlled stressors"
+        },
+        {
+          "n": 67,
+          "type": "Focal",
+          "label": "q:eval-metric",
+          "text": "Which reference-based or executable metric validly measures the intended property?",
+          "section": "Reference-based and task-specific metrics"
+        },
+        {
+          "n": 68,
+          "type": "Focal",
+          "label": "q:eval-judge",
+          "text": "How should a learned evaluator be validated for the decisions its scores will support?",
+          "section": "Model-based evaluators and LLM-as-a-judge"
+        },
+        {
+          "n": 69,
+          "type": "Focal",
+          "label": "q:eval-human",
+          "text": "Which human judgments are needed, and how should annotation and automated assessment be combined?",
+          "section": "Human and hybrid evaluation"
+        },
+        {
+          "n": 70,
+          "type": "Focal",
+          "label": "q:eval-intervention",
+          "text": "Which interventions can identify evidence use or component contribution, and under which assumptions?",
+          "section": "Counterfactual and intervention-based evaluation"
+        },
+        {
+          "n": 71,
+          "type": "Focal",
+          "label": "q:eval-online",
+          "text": "How should continuing evaluation separate system improvement from changes in users, sources, and judges?",
+          "section": "Online, arena-based, and dynamic evaluation"
+        },
+        {
+          "n": 72,
+          "type": "Focal",
+          "label": "q:eval-benchmark",
+          "text": "Which combination of benchmarks and infrastructure can support the intended evaluation claims?",
+          "section": "Benchmarks and Evaluation Infrastructure"
+        },
+        {
+          "n": 73,
+          "type": "Focal",
+          "label": "q:eval-agent-search",
+          "text": "How can evaluation distinguish useful planning, revision, and stopping from merely longer search?",
+          "section": "Evaluation of Agentic RAG"
+        },
+        {
+          "n": 74,
+          "type": "Focal",
+          "label": "q:eval-agent-memory",
+          "text": "What controlled evidence establishes the contribution of memory and multi-agent collaboration?",
+          "section": "Evaluation of Agentic RAG"
+        },
+        {
+          "n": 75,
+          "type": "Focal",
+          "label": "q:eval-reported",
+          "text": "Which conclusions can the reported common-protocol results support, and which remain unidentifiable?",
+          "section": "Reassessing Reported Results for RL-Trained RAG Systems"
+        },
+        {
+          "n": 76,
+          "type": "Focal",
+          "label": "q:eval-report",
+          "text": "Which uncertainty, versioning, and reporting practices make a comparative claim reproducible and appropriately limited?",
+          "section": "Evaluator Validity, Reproducibility, and Reporting"
+        }
+      ]
+    },
+    {
+      "key": "open",
+      "chapter": 7,
+      "file": "future.tex",
+      "title": "Open Challenges and Future Directions",
+      "label": "Open Frontiers",
+      "blurb": "The questions the field has not answered yet.",
+      "range": "Q77–Q91",
+      "count": 15,
+      "questions": [
+        {
+          "n": 77,
+          "type": "Open",
+          "label": "q:future-agency",
+          "text": "Under what workload conditions does observation-conditioned control improve the quality–latency–cost trade-off over prescribed or once-routed workflows?",
+          "section": "Foundations: Workload-Conditional Control and Composable Quality"
+        },
+        {
+          "n": 78,
+          "type": "Open",
+          "label": "q:future-contracts",
+          "text": "Which interface conditions let locally improved components preserve end-to-end evidence validity when they are recombined?",
+          "section": "Foundations: Workload-Conditional Control and Composable Quality"
+        },
+        {
+          "n": 79,
+          "type": "Open",
+          "label": "q:future-credit",
+          "text": "When can long-horizon feedback identify useful retrieval decisions rather than merely reinforce successful-looking trajectories?",
+          "section": "Learning: Identifiable Credit and Transferable Policies"
+        },
+        {
+          "n": 80,
+          "type": "Open",
+          "label": "q:future-transfer",
+          "text": "Can policies learn portable information goals without binding them to a particular retrieval backend or reward judge?",
+          "section": "Learning: Identifiable Credit and Transferable Policies"
+        },
+        {
+          "n": 81,
+          "type": "Open",
+          "label": "q:future-stopping",
+          "text": "How can retrieval and stopping policies preserve required answer quality as evidence availability, service load, and search costs change?",
+          "section": "Load-Aware Acquisition, Stopping, and Recovery"
+        },
+        {
+          "n": 82,
+          "type": "Open",
+          "label": "q:future-revision",
+          "text": "How can a source correction or withdrawal propagate through indices, contexts, and derived memories without erasing needed provenance?",
+          "section": "Continual Knowledge and Reliable Memory"
+        },
+        {
+          "n": 83,
+          "type": "Open",
+          "label": "q:future-memory",
+          "text": "Can selective persistence remain beneficial over task streams in which both evidence and access permissions change?",
+          "section": "Continual Knowledge and Reliable Memory"
+        },
+        {
+          "n": 84,
+          "type": "Open",
+          "label": "q:future-collaboration",
+          "text": "Which task, source, and load conditions justify dynamic team allocation beyond a single controller or fixed team?",
+          "section": "Conditional Scaling of Multi-Agent and Swarm-Oriented RAG"
+        },
+        {
+          "n": 85,
+          "type": "Open",
+          "label": "q:future-modal",
+          "text": "How can cross-modal transformations preserve the evidence units and qualifications needed to verify a generated claim?",
+          "section": "Multimodal, Domain-Specialized, and Open-World Evidence"
+        },
+        {
+          "n": 86,
+          "type": "Open",
+          "label": "q:future-domain",
+          "text": "Which evidence-selection and abstention policies transfer to domains where source authority, time, and access determine answerability?",
+          "section": "Multimodal, Domain-Specialized, and Open-World Evidence"
+        },
+        {
+          "n": 87,
+          "type": "Open",
+          "label": "q:future-integrity",
+          "text": "Can evidence integrity and action boundaries be preserved when retrieved content, source structure, or shared state is adversarial?",
+          "section": "Security, Privacy, Fairness, and Governance"
+        },
+        {
+          "n": 88,
+          "type": "Open",
+          "label": "q:future-privacy",
+          "text": "How can privacy claims cover repeated retrieval, generation, and memory reuse rather than only one protected interface?",
+          "section": "Security, Privacy, Fairness, and Governance"
+        },
+        {
+          "n": 89,
+          "type": "Open",
+          "label": "q:future-fairness",
+          "text": "How can disparity be located and reduced across evidence availability, retrieval exposure, and attributed answers without concealing utility losses?",
+          "section": "Security, Privacy, Fairness, and Governance"
+        },
+        {
+          "n": 90,
+          "type": "Open",
+          "label": "q:future-standardization",
+          "text": "What workload and reporting infrastructure makes RAG quality, efficiency, and scaling evidence comparable without imposing a universal score?",
+          "section": "Evaluation Standardization and Reproducibility"
+        },
+        {
+          "n": 91,
+          "type": "Open",
+          "label": "q:future-native",
+          "text": "Which acquisition and reasoning interfaces should be learned jointly, and which should remain explicit to preserve replaceability and audit?",
+          "section": "Toward Native Retrieval-Augmented Intelligence"
+        }
+      ]
+    }
+  ]
+}

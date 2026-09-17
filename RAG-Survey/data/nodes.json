@@ -1,0 +1,2408 @@
+[
+  {
+    "bibkey": "GLJ_ICLR_2025",
+    "title": "SmartRAG: Jointly Learn RAG-Related Tasks From the Environment Feedback",
+    "year": "2025",
+    "arxiv": "",
+    "n_cites": 3,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "HYM_TOIS_2025",
+    "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+    "year": "2025",
+    "arxiv": "",
+    "n_cites": 1,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Introduction": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "MVG_arXiv_2025",
+    "title": "ARAG: Agentic Retrieval Augmented Generation for Personalized Recommendation",
+    "year": "2025",
+    "arxiv": "2506.21931",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "achiam2023gpt4",
+    "title": "GPT-4 Technical Report",
+    "year": "2023",
+    "arxiv": "2303.08774",
+    "n_cites": 1,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Introduction": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "acqo2026",
+    "title": "When Should I Search More: Adaptive Complex Query Optimization with Reinforcement Learning",
+    "year": "2026",
+    "arxiv": "2601.21208",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "aisearchplanner2025",
+    "title": "AI-SearchPlanner: Modular Agentic Search via Pareto-Optimal Multi-Objective Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2508.20368",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "apex2026",
+    "title": "APEX-Searcher: Refining Credit Assignment with Subgoaling for Agentic Retrieval-Augmented Generation",
+    "year": "2026",
+    "arxiv": "2603.13853",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 3
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "arbor2026",
+    "title": "ARBOR: Online Process Rewards via a Reusable Rubric Buffer for Search Agents",
+    "year": "2026",
+    "arxiv": "2606.03239",
+    "n_cites": 4,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Open Challenges and Future Dir": 1,
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "artist2025",
+    "title": "Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2505.01441",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "asai2024selfrag",
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "year": "2024",
+    "arxiv": "",
+    "n_cites": 14,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 7,
+      "Treating RAG as a Whole": 1,
+      "Evaluation of RAG": 1,
+      "AgenticRAG": 4,
+      "Introduction": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "attentionretriever2026",
+    "title": "AttentionRetriever: Attention Layers are Secretly Long Document Retrievers",
+    "year": "2026",
+    "arxiv": "2602.12278",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "borgeaud2022improving",
+    "title": "Improving Language Models by Retrieving from Trillions of Tokens",
+    "year": "2022",
+    "arxiv": "2112.04426",
+    "n_cites": 6,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 4,
+      "Treating RAG as a Whole": 1,
+      "Introduction": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "certa2026",
+    "title": "CERTA: ``I Don't Know'' -- Towards Appropriate Trust with Certainty-Aware Retrieval Augmented Generation",
+    "year": "2026",
+    "arxiv": "2605.00957",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "chen2024rgb",
+    "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+    "year": "2024",
+    "arxiv": "2309.01431",
+    "n_cites": 1,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "chen2025and",
+    "title": "When and How to Augment Your Input: Question Routing Helps Balance the Accuracy and Efficiency of Large Language Models",
+    "year": "2025",
+    "arxiv": "",
+    "n_cites": 2,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "citationclosure2026",
+    "title": "Citation-Closure Retrieval and Per-Rule Attribution for Real-World Regulatory Compliance Question Answering",
+    "year": "2026",
+    "arxiv": "2605.29742",
+    "n_cites": 4,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Treating RAG as a Whole": 1,
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "coderagsurvey2025",
+    "title": "Retrieval-Augmented Code Generation: A Survey with Focus on Repository-Level Approaches",
+    "year": "2025",
+    "arxiv": "2510.04905",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "cogplanner2025",
+    "title": "CogPlanner: Unveiling the Potential of Agentic Multimodal Retrieval Augmented Generation with Planning",
+    "year": "2025",
+    "arxiv": "2501.15470",
+    "n_cites": 2,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Open Challenges and Future Dir": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "compactrag2026",
+    "title": "CompactRAG: Reducing LLM Calls and Token Overhead in Multi-Hop Question Answering",
+    "year": "2026",
+    "arxiv": "2602.05728",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "corpus2skill2026",
+    "title": "Don't Retrieve, Navigate: Distilling Enterprise Knowledge into Navigable Agent Skills for QA and RAG",
+    "year": "2026",
+    "arxiv": "2604.14572",
+    "n_cites": 3,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "cosearch2026",
+    "title": "CoSearch: Joint Training of Reasoning and Document Ranking via Reinforcement Learning for Agentic Search",
+    "year": "2026",
+    "arxiv": "2604.17555",
+    "n_cites": 5,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 5
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "cream2026",
+    "title": "CREAM: Continual Retrieval on Dynamic Streaming Corpora with Adaptive Soft Memory",
+    "year": "2026",
+    "arxiv": "2601.02708",
+    "n_cites": 8,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 4,
+      "Treating RAG as a Whole": 1,
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "criticr2026",
+    "title": "Critic-R: Improving Agentic Search using Instruction-tuned Retrievers with Natural Language Introspective Feedback",
+    "year": "2026",
+    "arxiv": "2606.00590",
+    "n_cites": 3,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 3
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "crosearch2026",
+    "title": "CroSearch-R1: Better Leveraging Cross-lingual Knowledge for Retrieval-Augmented Generation",
+    "year": "2026",
+    "arxiv": "2604.25182",
+    "n_cites": 1,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "ctrlrag2026",
+    "title": "CTRL-RAG: Contrastive Likelihood Reward Based Reinforcement Learning for Context-Faithful RAG Models",
+    "year": "2026",
+    "arxiv": "2603.04406",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "cusearch2026",
+    "title": "CuSearch: Curriculum Rollout Sampling via Search Depth for Agentic RAG",
+    "year": "2026",
+    "arxiv": "2605.11611",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "cwgrpo2026",
+    "title": "Enhancing LLM-based Search Agents via Contribution Weighted Group Relative Policy Optimization",
+    "year": "2026",
+    "arxiv": "2604.14267",
+    "n_cites": 6,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 1,
+      "RLTraining": 3
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "datacentric2025agentic",
+    "title": "Data-Centric Perspectives on Agentic Retrieval-Augmented Generation: A Survey",
+    "year": "2025",
+    "arxiv": "",
+    "n_cites": 2,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Introduction": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "deepdxsearch2025",
+    "title": "End-to-End Agentic RAG System Training for Traceable Diagnostic Reasoning",
+    "year": "2025",
+    "arxiv": "2508.15746",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "deepresearcher2025",
+    "title": "DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments",
+    "year": "2025",
+    "arxiv": "2504.03160",
+    "n_cites": 5,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "AgenticRAG": 2,
+      "RLTraining": 3
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "deepseekr12025",
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2501.12948",
+    "n_cites": 3,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 3
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "dgpo2026",
+    "title": "Can Compact Language Models Search Like Agents? Distillation-Guided Policy Optimization for Preserving Agentic RAG Capabilities",
+    "year": "2026",
+    "arxiv": "2508.20324",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "ding2024hybrid",
+    "title": "Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing",
+    "year": "2024",
+    "arxiv": "2404.14618",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "dpksa2026",
+    "title": "RAG with Differential Privacy",
+    "year": "2024",
+    "arxiv": "2412.19291",
+    "n_cites": 1,
+    "primary_chapter": "Open Challenges and Future Dir",
+    "chapters": {
+      "Open Challenges and Future Dir": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "dynasearcher2025",
+    "title": "DynaSearcher: Dynamic Knowledge Graph Augmented Search Agent via Multi-Reward Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2507.17365",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "edge2024graphrag",
+    "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+    "year": "2024",
+    "arxiv": "2404.16130",
+    "n_cites": 8,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 5,
+      "Treating RAG as a Whole": 1,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "embsim2024",
+    "title": "Beyond Benchmarks: Evaluating Embedding Model Similarity for Retrieval Augmented Generation Systems",
+    "year": "2024",
+    "arxiv": "2407.08275",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "es2024ragas",
+    "title": "RAGAS: Automated Evaluation of Retrieval Augmented Generation",
+    "year": "2024",
+    "arxiv": "2309.15217",
+    "n_cites": 1,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "evorag2026",
+    "title": "Curriculum Guided Reinforcement Learning for Efficient Multi-Hop Retrieval-Augmented Generation",
+    "year": "2025",
+    "arxiv": "2505.17391",
+    "n_cites": 3,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 3
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "faithjudge2025",
+    "title": "Benchmarking LLM Faithfulness in RAG with Evolving Leaderboards",
+    "year": "2025",
+    "arxiv": "2505.04847",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "finegrained2025privacy",
+    "title": "Fine-Grained Privacy Extraction from Retrieval-Augmented Generation Systems via Knowledge Asymmetry Exploitation",
+    "year": "2025",
+    "arxiv": "",
+    "n_cites": 1,
+    "primary_chapter": "Open Challenges and Future Dir",
+    "chapters": {
+      "Open Challenges and Future Dir": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "fintechrag2025",
+    "title": "Retrieval Augmented Generation (RAG) for Fintech: Agentic Design and Evaluation",
+    "year": "2025",
+    "arxiv": "2510.25518",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "flashrank2025",
+    "title": "Enhancing Retrieval-Augmented Generation with Two-Stage Retrieval: FlashRank Reranking and Query Expansion",
+    "year": "2025",
+    "arxiv": "2601.03258",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "franq2025",
+    "title": "FRANQ: Faithfulness-Aware Uncertainty Quantification for Fact-Checking the Output of Retrieval Augmented Generation",
+    "year": "2025",
+    "arxiv": "2505.21072",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "gao2022hyde",
+    "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+    "year": "2023",
+    "arxiv": "2212.10496",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "globalrag2025",
+    "title": "GlobalRAG: Enhancing Global Reasoning in Multi-hop Question Answering via Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2510.20548",
+    "n_cites": 1,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "graphr1_2025",
+    "title": "Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2507.21892",
+    "n_cites": 2,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "graphragrouter2026",
+    "title": "GraphRAG-Router: Learning Cost-Efficient Routing over GraphRAGs and LLMs with Reinforcement Learning",
+    "year": "2026",
+    "arxiv": "2604.16401",
+    "n_cites": 2,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "grip2026",
+    "title": "Retrieval as Generation: A Unified Framework with Self-Triggered Information Planning",
+    "year": "2026",
+    "arxiv": "2604.11407",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "guo2024lightrag",
+    "title": "LightRAG: Simple and Fast Retrieval-Augmented Generation",
+    "year": "2024",
+    "arxiv": "2410.05779",
+    "n_cites": 7,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 5,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "guu2020realm",
+    "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+    "year": "2020",
+    "arxiv": "2002.08909",
+    "n_cites": 8,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 3,
+      "Treating RAG as a Whole": 2,
+      "AgenticRAG": 2,
+      "Introduction": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "hashemi2025costaware",
+    "title": "Cost-Aware Retrieval-Augmentation Reasoning Models with Adaptive Retrieval Depth",
+    "year": "2025",
+    "arxiv": "2510.15719",
+    "n_cites": 2,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "hipporag2024",
+    "title": "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "year": "2024",
+    "arxiv": "2405.14831",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "hiprag2025",
+    "title": "HiPRAG: Hierarchical Process Rewards for Efficient Agentic Retrieval Augmented Generation",
+    "year": "2025",
+    "arxiv": "2510.07794",
+    "n_cites": 5,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 3,
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "history_aware_rl_retriever2026",
+    "title": "Reinforcement Fine-Tuning for History-Aware Dense Retriever in RAG",
+    "year": "2026",
+    "arxiv": "2602.03645",
+    "n_cites": 4,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 4
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "hofstatter2023fid",
+    "title": "FiD-Light: Efficient and Effective Retrieval-Augmented Text Generation",
+    "year": "2023",
+    "arxiv": "",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Treating RAG as a Whole": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "hu2026sage",
+    "title": "SAGE: Benchmarking and Improving Retrieval for Deep Research Agents",
+    "year": "2026",
+    "arxiv": "2602.05975",
+    "n_cites": 2,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "izacard2021leveraging",
+    "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+    "year": "2021",
+    "arxiv": "",
+    "n_cites": 9,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 7,
+      "Treating RAG as a Whole": 1,
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "izacard2023atlas",
+    "title": "ATLAS: Few-shot Learning with Retrieval Augmented Language Models",
+    "year": "2023",
+    "arxiv": "2208.03299",
+    "n_cites": 2,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Treating RAG as a Whole": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "jeong2024adaptive",
+    "title": "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity",
+    "year": "2024",
+    "arxiv": "",
+    "n_cites": 6,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 3,
+      "Treating RAG as a Whole": 1,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "jiang2023active",
+    "title": "Active Retrieval Augmented Generation",
+    "year": "2023",
+    "arxiv": "",
+    "n_cites": 6,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 4,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "jiang2023llmlingua",
+    "title": "LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models",
+    "year": "2023",
+    "arxiv": "2310.05736",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "jin2025searchr1",
+    "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2503.09516",
+    "n_cites": 17,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 7,
+      "Treating RAG as a Whole": 1,
+      "Open Challenges and Future Dir": 2,
+      "AgenticRAG": 2,
+      "Introduction": 1,
+      "RLTraining": 4
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "jin2026searchr1plus",
+    "title": "How to Train Your Deep Research Agent? Prompt, Reward, and Policy Optimization in Search-R1",
+    "year": "2026",
+    "arxiv": "2602.19526",
+    "n_cites": 3,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 3
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "karpukhin2020dense",
+    "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+    "year": "2020",
+    "arxiv": "",
+    "n_cites": 2,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "khandelwal2020generalization",
+    "title": "Generalization through Memorization: Nearest Neighbor Language Models",
+    "year": "2020",
+    "arxiv": "1911.00172",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Introduction": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "latentrag2026",
+    "title": "LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG",
+    "year": "2026",
+    "arxiv": "2605.06285",
+    "n_cites": 2,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "lee2024agentg",
+    "title": "Agent-G: An Agentic Framework for Graph Retrieval-Augmented Generation",
+    "year": "2024",
+    "arxiv": "",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "leng2025decex",
+    "title": "DecEx-RAG: Boosting Agentic Retrieval-Augmented Generation with Decision and Execution Optimization via Process Supervision",
+    "year": "2025",
+    "arxiv": "2510.05691",
+    "n_cites": 6,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "Treating RAG as a Whole": 1,
+      "AgenticRAG": 1,
+      "RLTraining": 4
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "lets2025",
+    "title": "LeTS: Learning to Think-and-Search via Process-and-Outcome Reward Hybridization",
+    "year": "2025",
+    "arxiv": "2505.17447",
+    "n_cites": 4,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 2,
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "leviathan2023speculative",
+    "title": "Speculative Decoding with Big Little Decoder",
+    "year": "2023",
+    "arxiv": "2302.07863",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "lewis2020rag",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "year": "2020",
+    "arxiv": "2005.11401",
+    "n_cites": 7,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 4,
+      "AgenticRAG": 2,
+      "Introduction": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "li2025ragreasoning",
+    "title": "Synergizing RAG and Reasoning: A Systematic Review",
+    "year": "2025",
+    "arxiv": "2504.15909",
+    "n_cites": 3,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Introduction": 3
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "li2025searcho1",
+    "title": "Search-o1: Agentic Search-Enhanced Large Reasoning Models",
+    "year": "2025",
+    "arxiv": "2501.05366",
+    "n_cites": 9,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 4,
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 1,
+      "RLTraining": 3
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "lightman2023verify",
+    "title": "Let's Verify Step by Step",
+    "year": "2023",
+    "arxiv": "2305.20050",
+    "n_cites": 1,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "lin2024radit",
+    "title": "RA-DIT: Retrieval-Augmented Dual Instruction Tuning",
+    "year": "2024",
+    "arxiv": "2310.01352",
+    "n_cites": 2,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Treating RAG as a Whole": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "lin2025moler",
+    "title": "Domain-Aware RAG: MoL-Enhanced RL for Efficient Training and Scalable Retrieval",
+    "year": "2025",
+    "arxiv": "2509.06650",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "lin2025refrag",
+    "title": "REFRAG: Rethinking RAG based Decoding",
+    "year": "2025",
+    "arxiv": "2509.01092",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "liu2023lostmiddle",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "year": "2023",
+    "arxiv": "2307.03172",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "liu2024lostinthemiddle",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "year": "2024",
+    "arxiv": "2307.03172",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "livevectorlake2025",
+    "title": "LiveVectorLake: A Real-Time Versioned Knowledge Base Architecture for Streaming Vector Updates and Temporal Retrieval",
+    "year": "2025",
+    "arxiv": "2601.05270",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 3
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "llmspecific2025",
+    "title": "LLM-Specific Utility: A New Perspective for Retrieval-Augmented Generation",
+    "year": "2025",
+    "arxiv": "2510.11358",
+    "n_cites": 1,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "llmwiki2026",
+    "title": "Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki",
+    "year": "2026",
+    "arxiv": "2605.25480",
+    "n_cites": 2,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "luma2025",
+    "title": "LUMA-RAG: Lifelong Multimodal Agents with Provably Stable Streaming Alignment",
+    "year": "2025",
+    "arxiv": "2511.02371",
+    "n_cites": 5,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "lyu2025crudrag",
+    "title": "CRUD-RAG: A Comprehensive Chinese Benchmark for Retrieval-Augmented Generation of Large Language Models",
+    "year": "2025",
+    "arxiv": "2401.17043",
+    "n_cites": 1,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "marag2025",
+    "title": "MA-RAG: Multi-Agent Retrieval-Augmented Generation via Collaborative Chain-of-Thought Reasoning",
+    "year": "2025",
+    "arxiv": "2505.20096",
+    "n_cites": 2,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "massrag2026",
+    "title": "MASS-RAG: Multi-Agent Synthesis Retrieval-Augmented Generation",
+    "year": "2026",
+    "arxiv": "2604.18509",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "medicalchecker2026",
+    "title": "What Makes a Medical Checker Trainable? Diagnosing Signal Collapse and Reward Hacking in Checker-Guided RAG for Biomedical QA",
+    "year": "2026",
+    "arxiv": "2605.25988",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "memgraphrag2026",
+    "title": "MemGraphRAG: Memory-based Multi-Agent System for Graph Retrieval-Augmented Generation",
+    "year": "2026",
+    "arxiv": "2606.00610",
+    "n_cites": 5,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "mma2025rag",
+    "title": "MMA-RAG: A Survey on Multimodal Agentic Retrieval-Augmented Generation",
+    "year": "2025",
+    "arxiv": "",
+    "n_cites": 3,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Open Challenges and Future Dir": 1,
+      "Introduction": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "mmsearchr12025",
+    "title": "MMSearch-R1: Incentivizing LMMs to Search via End-to-End Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2506.20670",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "mrrag2025",
+    "title": "Ask in Any Modality: A Comprehensive Survey on Multimodal Retrieval-Augmented Generation",
+    "year": "2025",
+    "arxiv": "2502.08826",
+    "n_cites": 2,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Open Challenges and Future Dir": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "multistagereward2026",
+    "title": "Learning When to Search: Multi-Stage Reward Design for Efficient Agentic RAG with Reasoning Language Models",
+    "year": "2026",
+    "arxiv": "",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "nakano2021webgpt",
+    "title": "WebGPT: Browser-Assisted Question-Answering with Human Feedback",
+    "year": "2021",
+    "arxiv": "2112.09332",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "neighborhoods2026",
+    "title": "Why Neighborhoods Matter: Traversal Context and Provenance in Agentic GraphRAG",
+    "year": "2026",
+    "arxiv": "2605.15109",
+    "n_cites": 1,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "oaks2026",
+    "title": "OAKS: Can Large Language Models Keep Up? Benchmarking Online Adaptation to Continual Knowledge Streams",
+    "year": "2026",
+    "arxiv": "2603.07392",
+    "n_cites": 5,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Evaluation of RAG": 2,
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "ong2025routellm",
+    "title": "RouteLLM: Learning to Route LLMs with Preference Data",
+    "year": "2025",
+    "arxiv": "2406.18665",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "onlineopt2025",
+    "title": "Online-Optimized RAG for Tool Use and Function Calling",
+    "year": "2025",
+    "arxiv": "2509.20415",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "opera2025",
+    "title": "OPERA: A Reinforcement Learning--Enhanced Orchestrated Planner-Executor Architecture for Reasoning-Oriented Multi-Hop Retrieval",
+    "year": "2025",
+    "arxiv": "2508.16438",
+    "n_cites": 3,
+    "primary_chapter": "Open Challenges and Future Dir",
+    "chapters": {
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 1,
+      "RLTraining": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "othink2026",
+    "title": "OThink-SRR1: Search, Refine and Reasoning with Reinforced Learning for Large Language Models",
+    "year": "2026",
+    "arxiv": "2604.19766",
+    "n_cites": 1,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "pad2026",
+    "title": "Privacy-Aware Decoding: Mitigating Privacy Leakage of Large Language Models in Retrieval-Augmented Generation",
+    "year": "2026",
+    "arxiv": "2508.03098",
+    "n_cites": 1,
+    "primary_chapter": "Open Challenges and Future Dir",
+    "chapters": {
+      "Open Challenges and Future Dir": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "parag2024",
+    "title": "PA-RAG: RAG Alignment via Multi-Perspective Preference Optimization",
+    "year": "2024",
+    "arxiv": "2412.14510",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "parallelsearch2025",
+    "title": "ParallelSearch: Train your LLMs to Decompose Query and Search Sub-queries in Parallel with Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2508.09303",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "planrag2024",
+    "title": "PlanRAG: A Plan-then-Retrieval Augmented Generation for Reasoning over Heterogeneous Data",
+    "year": "2024",
+    "arxiv": "2406.12430",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "policygoverned2025",
+    "title": "Policy-Governed RAG -- Research Design Study",
+    "year": "2025",
+    "arxiv": "2510.19877",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Treating RAG as a Whole": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "prographr1_2026",
+    "title": "HyperGraphPro: Progress-Aware Reinforcement Learning for Structure-Guided Hypergraph RAG",
+    "year": "2026",
+    "arxiv": "2601.17755",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "prorag2026",
+    "title": "ProRAG: Process-Supervised Reinforcement Learning for Retrieval-Augmented Generation",
+    "year": "2026",
+    "arxiv": "2601.21912",
+    "n_cites": 5,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 1,
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "qian2024memorag",
+    "title": "MemoRAG: Boosting Long Context Processing with Global Memory-Enhanced Retrieval Augmentation",
+    "year": "2024",
+    "arxiv": "2409.05591",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "qprm2025",
+    "title": "Q-PRM: Adaptive Query Rewriting for Retrieval-Augmented Generation via Step-level Process Supervision",
+    "year": "2025",
+    "arxiv": "",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "r1searcher2025",
+    "title": "R1-Searcher: Incentivizing the Search Capability in LLMs via Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2503.05592",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "r1searcherplus2025",
+    "title": "R1-Searcher++: Incentivizing the Dynamic Knowledge Acquisition of LLMs via Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2505.17005",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "r3_retrieval_rl2025",
+    "title": "R3: Optimizing Retrieval for RAG via Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2510.24652",
+    "n_cites": 4,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 4
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "r3rag2025",
+    "title": "R3-RAG: Learning Step-by-Step Reasoning and Retrieval for LLMs via Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2505.23794",
+    "n_cites": 4,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 2,
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "rafailov2023dpo",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "year": "2023",
+    "arxiv": "2305.18290",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "ragrl2026",
+    "title": "Tackling Distractor Documents in Multi-Hop QA with Reinforcement and Curriculum Learning",
+    "year": "2026",
+    "arxiv": "",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "ram2023incontextralm",
+    "title": "In-Context Retrieval-Augmented Language Models",
+    "year": "2023",
+    "arxiv": "2302.00083",
+    "n_cites": 1,
+    "primary_chapter": "Treating RAG as a Whole",
+    "chapters": {
+      "Treating RAG as a Whole": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "rapid2025",
+    "title": "RAPID: Long-Context Inference with Retrieval-Augmented Speculative Decoding",
+    "year": "2025",
+    "arxiv": "2502.20330",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "raser2026",
+    "title": "RASER: Recoverability-Aware Selective Escalation Router for Multi-Hop Question Answering",
+    "year": "2026",
+    "arxiv": "2606.02488",
+    "n_cites": 1,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "ravuru2024agentic",
+    "title": "Agentic Retrieval-Augmented Generation for Time Series Analysis",
+    "year": "2024",
+    "arxiv": "2408.14484",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "realm_retrieve2026",
+    "title": "ReaLM-Retrieve: When to Retrieve During Reasoning: Adaptive Retrieval for Large Reasoning Models",
+    "year": "2026",
+    "arxiv": "2604.26649",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "reasonrag2025",
+    "title": "Process vs. Outcome Reward: Which is Better for Agentic RAG Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "research2025",
+    "title": "ReSearch: Learning to Reason with Search for LLMs via Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2503.19470",
+    "n_cites": 9,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 5,
+      "Open Challenges and Future Dir": 1,
+      "RLTraining": 3
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "researcher2025",
+    "title": "RE-Searcher: Robust Agentic Search with Goal-oriented Planning and Self-reflection",
+    "year": "2025",
+    "arxiv": "2509.26048",
+    "n_cites": 4,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Treating RAG as a Whole": 1,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "rewritegen2026",
+    "title": "ReWriteGen: Autonomous Query Optimization for Retrieval-Augmented Large Language Models via Reinforcement Learning",
+    "year": "2026",
+    "arxiv": "",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "rexrag2025",
+    "title": "REX-RAG: Reasoning Exploration with Policy Correction in Retrieval-Augmented Generation",
+    "year": "2025",
+    "arxiv": "2508.08149",
+    "n_cites": 3,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "Open Challenges and Future Dir": 1,
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "riker2026",
+    "title": "RIKER: Scalable and Reliable Evaluation of AI Knowledge Retrieval Systems",
+    "year": "2026",
+    "arxiv": "2601.08847",
+    "n_cites": 1,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "rlqr2025",
+    "title": "Annotation-Free Reinforcement Learning Query Rewriting via Verifiable Search Reward",
+    "year": "2025",
+    "arxiv": "2507.23242",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "rt4chart2026",
+    "title": "Retromorphic Testing with Hierarchical Verification for Hallucination Detection in RAG",
+    "year": "2026",
+    "arxiv": "2603.27752",
+    "n_cites": 5,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 3,
+      "Evaluation of RAG": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "s3rag2025",
+    "title": "s3: You Don't Need That Much Data to Train a Search Agent via RL",
+    "year": "2025",
+    "arxiv": "2505.14146",
+    "n_cites": 3,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 3
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "sarthi2024raptor",
+    "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+    "year": "2024",
+    "arxiv": "2401.18059",
+    "n_cites": 7,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 5,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "schick2023toolformer",
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "year": "2023",
+    "arxiv": "2302.04761",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 3
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "secure2026rag",
+    "title": "Towards Secure Retrieval-Augmented Generation: A Comprehensive Review of Threats, Defenses and Benchmarks",
+    "year": "2026",
+    "arxiv": "2603.21654",
+    "n_cites": 2,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1,
+      "Open Challenges and Future Dir": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "securing2026rag",
+    "title": "Securing Retrieval-Augmented Generation: A Taxonomy of Attacks, Defenses, and Future Directions",
+    "year": "2026",
+    "arxiv": "2604.08304",
+    "n_cites": 2,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1,
+      "Open Challenges and Future Dir": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "semanticillusion2025",
+    "title": "The Semantic Illusion: Certified Limits of Embedding-Based Hallucination Detection in RAG Systems",
+    "year": "2025",
+    "arxiv": "2512.15068",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "semarag2026",
+    "title": "SEMA-RAG: A Self-Evolving Multi-Agent Retrieval-Augmented Generation Framework for Medical Reasoning",
+    "year": "2026",
+    "arxiv": "2605.17101",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "sesearch2026",
+    "title": "SE-Search: Self-Evolving Search Agent via Memory and Dense Reward",
+    "year": "2026",
+    "arxiv": "2603.03293",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "shao2023enhancing",
+    "title": "Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy",
+    "year": "2023",
+    "arxiv": "",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "sharma2025rag",
+    "title": "Retrieval-Augmented Generation: A Survey of Architectures, Training, and Applications",
+    "year": "2025",
+    "arxiv": "2505.15539",
+    "n_cites": 2,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Introduction": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "shi2024replug",
+    "title": "REPLUG: Retrieval-Augmented Black-Box Language Models",
+    "year": "2024",
+    "arxiv": "",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Treating RAG as a Whole": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "shim2026ldar",
+    "title": "Beyond RAG vs.\\ Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding",
+    "year": "2026",
+    "arxiv": "2509.21865",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "shinn2023reflexion",
+    "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "year": "2023",
+    "arxiv": "2303.11366",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Evaluation of RAG": 1,
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "silverstein1999analysis",
+    "title": "Analysis of a Very Large Web Search Engine Query Log",
+    "year": "1999",
+    "arxiv": "",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "singh2025agentic",
+    "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+    "year": "2025",
+    "arxiv": "2501.09136",
+    "n_cites": 4,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "AgenticRAG": 1,
+      "Introduction": 3
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "sirag2025",
+    "title": "SIRAG: Towards Stable and Interpretable RAG with A Process-Supervised Multi-Agent Framework",
+    "year": "2025",
+    "arxiv": "",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "sok2026agentic",
+    "title": "SoK: Agentic Retrieval-Augmented Generation (RAG): Taxonomy, Architectures, Evaluation, and Research Directions",
+    "year": "2026",
+    "arxiv": "2603.07379",
+    "n_cites": 4,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Treating RAG as a Whole": 1,
+      "AgenticRAG": 1,
+      "Introduction": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "spdrag2026",
+    "title": "SPD-RAG: Sub-Agent Per Document Retrieval-Augmented Generation",
+    "year": "2026",
+    "arxiv": "2603.08329",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "stepsearch2025",
+    "title": "StepSearch: Igniting LLMs Search Ability via Step-Wise Proximal Policy Optimization",
+    "year": "2025",
+    "arxiv": "2505.15107",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "stratifiedgrpo2025",
+    "title": "Stratified GRPO: Handling Structural Heterogeneity in Reinforcement Learning of LLM Search Agents",
+    "year": "2025",
+    "arxiv": "2510.06214",
+    "n_cites": 1,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "streamingrag2025",
+    "title": "From Static to Dynamic: A Streaming RAG Approach to Real-time Knowledge Base",
+    "year": "2025",
+    "arxiv": "2508.05662",
+    "n_cites": 2,
+    "primary_chapter": "Treating RAG as a Whole",
+    "chapters": {
+      "Treating RAG as a Whole": 1,
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "stride2026",
+    "title": "STRIDE: Strategic Iterative Decision-Making for Retrieval-Augmented Multi-Hop Question Answering",
+    "year": "2026",
+    "arxiv": "2604.17405",
+    "n_cites": 3,
+    "primary_chapter": "Treating RAG as a Whole",
+    "chapters": {
+      "Treating RAG as a Whole": 1,
+      "Evaluation of RAG": 1,
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "su2024dragin",
+    "title": "DRAGIN: Dynamic Retrieval Augmented Generation Based on the Real-Time Information Needs of Large Language Models",
+    "year": "2024",
+    "arxiv": "",
+    "n_cites": 4,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 3,
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "sys12_2025",
+    "title": "Reasoning RAG via System 1 or System 2: A Survey on Reasoning Agentic Retrieval-Augmented Generation for Industry Challenges",
+    "year": "2025",
+    "arxiv": "2506.10408",
+    "n_cites": 2,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Introduction": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "team2023gemini",
+    "title": "Gemini: A Family of Highly Capable Multimodal Models",
+    "year": "2023",
+    "arxiv": "2312.11805",
+    "n_cites": 1,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Introduction": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "thakur2021beir",
+    "title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+    "year": "2021",
+    "arxiv": "2104.08663",
+    "n_cites": 1,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "touvron2023llama",
+    "title": "LLaMA: Open and Efficient Foundation Language Models",
+    "year": "2023",
+    "arxiv": "2302.13971",
+    "n_cites": 1,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Introduction": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "treegrpo2025",
+    "title": "Tree Search for LLM Agent Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2509.21240",
+    "n_cites": 1,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "treeps2026",
+    "title": "TreePS-RAG: Tree-based Process Supervision for Reinforcement Learning in Agentic RAG",
+    "year": "2026",
+    "arxiv": "2601.06922",
+    "n_cites": 5,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 1,
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "trivedi2023interleaving",
+    "title": "Interleaving Retrieval with Chain-of-Thought Reasoning for Knowledge-Intensive Multi-Step Questions",
+    "year": "2023",
+    "arxiv": "",
+    "n_cites": 5,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1,
+      "Treating RAG as a Whole": 1,
+      "AgenticRAG": 3
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "trivia2026",
+    "title": "Rethinking Evaluation for LLM Hallucination Detection: A Desiderata, A New RAG-based Benchmark, New Insights",
+    "year": "2026",
+    "arxiv": "2605.11330",
+    "n_cites": 2,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "ur22025",
+    "title": "UR2: Unify RAG and Reasoning through Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2508.06165",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "webdancer2025",
+    "title": "WebDancer: Towards Autonomous Information Seeking Agency",
+    "year": "2025",
+    "arxiv": "2505.22648",
+    "n_cites": 3,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "AgenticRAG": 1,
+      "RLTraining": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "websailor2025",
+    "title": "WebSailor: Navigating Super-human Reasoning for Web Agent",
+    "year": "2025",
+    "arxiv": "2507.02592",
+    "n_cites": 5,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "AgenticRAG": 1,
+      "RLTraining": 4
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "webthinker2025",
+    "title": "WebThinker: Empowering Large Reasoning Models with Deep Research Capability",
+    "year": "2025",
+    "arxiv": "2504.21776",
+    "n_cites": 4,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 2,
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "when2tool2026",
+    "title": "When2Tool: LLM Agents Already Know When to Call Tools -- Even Without Reasoning",
+    "year": "2026",
+    "arxiv": "2605.09252",
+    "n_cites": 3,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "Evaluation of RAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "wu2024rag",
+    "title": "Retrieval-Augmented Generation for Natural Language Processing: A Survey and Outlook",
+    "year": "2024",
+    "arxiv": "2407.13193",
+    "n_cites": 2,
+    "primary_chapter": "Introduction",
+    "chapters": {
+      "Introduction": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "wu2025searchwisely",
+    "title": "Search Wisely: Mitigating Sub-optimal Agentic Searches By Reducing Uncertainty",
+    "year": "2025",
+    "arxiv": "2505.17281",
+    "n_cites": 4,
+    "primary_chapter": "Evaluation of RAG",
+    "chapters": {
+      "Evaluation of RAG": 1,
+      "Open Challenges and Future Dir": 1,
+      "AgenticRAG": 1,
+      "RLTraining": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "xu2024recomp",
+    "title": "RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation",
+    "year": "2024",
+    "arxiv": "2310.04408",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "yan2024crag",
+    "title": "CRAG: Corrective Retrieval Augmented Generation",
+    "year": "2024",
+    "arxiv": "2401.15884",
+    "n_cites": 4,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 2,
+      "AgenticRAG": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "yang2026sira",
+    "title": "SIRA: Superintelligent Retrieval Agent",
+    "year": "2026",
+    "arxiv": "2605.06647",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "yao2023react",
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "year": "2023",
+    "arxiv": "2210.03629",
+    "n_cites": 1,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "yen2024cepe",
+    "title": "CEPE: Long-Context Language Modeling with Parallel Context Encoding",
+    "year": "2024",
+    "arxiv": "",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "yu2025graphragr1",
+    "title": "GraphRAG-R1: Graph Retrieval-Augmented Generation with Process-Constrained Reinforcement Learning",
+    "year": "2026",
+    "arxiv": "2507.23581",
+    "n_cites": 4,
+    "primary_chapter": "AgenticRAG",
+    "chapters": {
+      "AgenticRAG": 2,
+      "RLTraining": 2
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "zamani2024stochastic",
+    "title": "Stochastic RAG: End-to-End Retrieval-Augmented Generation through Expected Utility Maximization",
+    "year": "2024",
+    "arxiv": "",
+    "n_cites": 1,
+    "primary_chapter": "Treating RAG as a Whole",
+    "chapters": {
+      "Treating RAG as a Whole": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "zerosearch2025",
+    "title": "ZeroSearch: Incentivize the Search Capability of LLMs without Searching",
+    "year": "2025",
+    "arxiv": "2505.04588",
+    "n_cites": 6,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 6
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "zhang2024raft",
+    "title": "RAFT: Adapting Language Model to Domain Specific RAG",
+    "year": "2024",
+    "arxiv": "2403.10131",
+    "n_cites": 1,
+    "primary_chapter": "Treating RAG as a Whole",
+    "chapters": {
+      "Treating RAG as a Whole": 1
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "zhao2025expandsearch",
+    "title": "Beyond the Limitation of a Single Query: Train Your LLM for Query Expansion with Reinforcement Learning",
+    "year": "2025",
+    "arxiv": "2510.10009",
+    "n_cites": 2,
+    "primary_chapter": "RLTraining",
+    "chapters": {
+      "RLTraining": 2
+    },
+    "arxiv_exists": null,
+    "cited_by_count": null
+  },
+  {
+    "bibkey": "zhao2026component",
+    "title": "Not All RAGs Are Created Equal: A Component-Wise Empirical Study for Software Engineering Tasks",
+    "year": "2026",
+    "arxiv": "2605.14503",
+    "n_cites": 1,
+    "primary_chapter": "Dissecting the RAG Pipeline: C",
+    "chapters": {
+      "Dissecting the RAG Pipeline: C": 1
+    },
+    "arxiv_exists": true,
+    "cited_by_count": null
+  }
+]

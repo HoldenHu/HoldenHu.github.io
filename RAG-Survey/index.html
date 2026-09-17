@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAG in the Agent Era — A Question-Driven Survey</title>
+<meta name="description" content="A question-driven survey of retrieval-augmented generation: six components, one evidence flow, and the point where coordination itself must become adaptive. 66 numbered questions, 1,118 records, every screening step accounted for.">
+<link rel="canonical" href="https://holdenhu.github.io/RAG-Survey/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RAG Survey">
+<meta property="og:url" content="https://holdenhu.github.io/RAG-Survey/">
+<meta property="og:title" content="RAG in the Agent Era — A Question-Driven Survey">
+<meta property="og:description" content="Six components, one evidence flow, and the point where coordination must become adaptive. 66 numbered questions, 1,118 records, every screening step accounted for.">
+<meta property="og:image" content="https://holdenhu.github.io/RAG-Survey/assets/og_card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RAG in the Agent Era — A Question-Driven Survey">
+<meta name="twitter:description" content="66 numbered questions, six components, 1,118 records — a question-driven synthesis of retrieval-augmented generation.">
+<meta name="twitter:image" content="https://holdenhu.github.io/RAG-Survey/assets/og_card.png">
+<meta name="theme-color" content="#16243d">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+
+<noscript>
+  <div class="wrap" style="padding-top:14px">
+    <p class="tnote" style="border:0;background:none;padding-left:0;margin:0">
+      The question explorer, the design vocabulary and the catalog search are rendered from JSON with
+      JavaScript. Enable JavaScript, or browse the same data in the
+      <a href="https://github.com/HoldenHu/RAG-Survey">repository</a>.
+    </p>
+  </div>
+</noscript>
+
+<header class="topbar">
+  <div class="wrap">
+    <img class="icon" src="assets/title_icon.png" alt="">
+    <span class="wordmark">RAG Survey</span>
+    <span class="spacer"></span>
+    <nav>
+      <a href="#summary">Summary</a>
+      <a href="#questions">Questions</a>
+      <a href="#vocabulary">Vocabulary</a>
+      <a href="#landscape">Landscape</a>
+      <a href="papers.html">Catalog</a>
+      <a href="citation-graph.html">Citations</a>
+      <a href="#citation">Cite</a>
+    </nav>
+  </div>
+  <div class="qstrip" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</header>
+
+<!-- ── Hero ────────────────────────────────────────────────────────────── -->
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Question-Driven Survey &middot; 2026</div>
+    <h1>Retrieval-Augmented Generation in the Agent Era</h1>
+    <p class="subtitle">A question-driven survey from components to adaptive control: evidence is followed through six components of the RAG pipeline, and the analysis asks when the coordination itself must become adaptive &mdash; revising decisions in response to intermediate results.</p>
+    <p class="authors"><a href="https://github.com/HoldenHu">Hengchang Hu</a></p>
+    <p class="affil">NetEase Fuxi AI SG Lab &middot; Singapore &middot; hengchang.hu@oc.netease.com</p>
+    <div class="btnrow">
+      <a class="btn ghost" href="#" aria-disabled="true">arXiv &mdash; coming soon</a>
+      <a class="btn" href="papers.html">Interactive catalog</a>
+      <a class="btn ghost" href="citation-graph.html">Citation graph &rarr;</a>
+      <a class="btn ghost" href="#questions">66 questions &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ── Stats ─────────────────────────────────────────────────────────── -->
+  <div class="stats">
+    <div class="stat"><b>66</b><span>numbered questions (Q26&ndash;Q91)</span></div>
+    <div class="stat"><b>6</b><span>components traced end to end</span></div>
+    <div class="stat"><b>1,118</b><span>records in the survey library</span></div>
+    <div class="stat"><b>684</b><span>works cited in the text</span></div>
+    <div class="stat"><b>295</b><span>duplicate records removed</span></div>
+    <div class="stat"><b>222</b><span>pages &middot; 8 chapters &middot; 2 appendices</span></div>
+  </div>
+
+  <!-- ── The paper in 90 seconds ───────────────────────────────────────── -->
+  <section id="summary">
+    <div class="eyebrow">The short version</div>
+    <h2>The survey, in 90 seconds</h2>
+    <p class="lede">Four moves: fix the unit of analysis at the component level, give design choices a shared language, follow each component&rsquo;s agentification up to adaptive control, and account for every record that enters or leaves the library.</p>
+    <div class="beats">
+      <div class="beat p1">
+        <div class="n">1</div>
+        <h3>Questions, not listings</h3>
+        <p>The survey is organized by 66 numbered questions, each anchoring a subsection and answered in place. Every claim attaches to a question rather than to a running list of systems.</p>
+      </div>
+      <div class="beat p2">
+        <div class="n">2</div>
+        <h3>Six components, one evidence flow</h3>
+        <p>Query, Datastore, Retriever, Retrieved Results, Generator, Response. Each is analyzed through the object it handles, the bottleneck that object creates, and the method families that address it.</p>
+      </div>
+      <div class="beat p3">
+        <div class="n">3</div>
+        <h3>When coordination becomes adaptive</h3>
+        <p>Routing, looping, planning; hierarchy, graphs, agent-written memory; post-hoc, intrinsic, process-level verification. A descriptive vocabulary for configurations &mdash; not a ladder every system must climb.</p>
+      </div>
+      <div class="beat p4">
+        <div class="n">4</div>
+        <h3>Accounting, in the open</h3>
+        <p>1,118 records entered the library, 295 duplicates were removed, and Appendix&nbsp;B documents every screening decision &mdash; including what the available record does not establish.</p>
+      </div>
+    </div>
+
+    <figure>
+      <img src="assets/hero.jpg" alt="Illustration: document stacks, a retrieval lens, and a control loop of connected nodes" style="border-radius:12px">
+      <figcaption><b>The survey&rsquo;s subject.</b> Documents become a searchable store, retrieval becomes an operation a system can decide about, and the decisions connect into a control loop. When that loop can revise itself, coordination has become adaptive.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ── Question explorer ─────────────────────────────────────────────── -->
+  <section id="questions">
+    <div class="eyebrow">Question explorer</div>
+    <h2>66 questions, answered in place</h2>
+    <p class="lede">Chapters 3, 4, 6 and 7 argue by question: each numbered question anchors a subsection and is answered there. <em>Focal</em> questions structure the synthesis; <em>open</em> questions mark what the field has not settled. Numbering follows the PDF.</p>
+
+    <div class="tabs" id="q-tabs"></div>
+    <div class="qbar">
+      <input type="search" id="q-search" placeholder="Search questions &mdash; e.g. memory, evaluation, latency" aria-label="Search questions">
+      <button class="sbtn" id="q-type-all" aria-pressed="true" type="button">All</button>
+      <button class="sbtn" id="q-type-focal" aria-pressed="false" type="button">Focal</button>
+      <button class="sbtn" id="q-type-open" aria-pressed="false" type="button">Open</button>
+      <span class="count" id="q-count"></span>
+    </div>
+    <div class="qgrid" id="q-grid"></div>
+    <p class="qempty" id="q-empty" hidden>No question matches that filter.</p>
+    <p class="tnote" style="border:0;background:none;padding-left:0">Rendered from <a href="https://github.com/HoldenHu/RAG-Survey">the manuscript&rsquo;s own sources</a>: each card quotes the question verbatim and links back to its chapter.</p>
+  </section>
+
+  <!-- ── Design vocabulary ─────────────────────────────────────────────── -->
+  <section id="vocabulary">
+    <div class="eyebrow">Design vocabulary</div>
+    <h2>One language for design choices</h2>
+    <p class="lede">Component-level analysis needs a shared vocabulary. Six W-questions and one H-question capture the decisions at each stage; three axes with four positions each describe how far a system has moved from a fixed pipeline toward adaptive control.</p>
+
+    <div class="tablecard">
+      <table>
+        <thead>
+          <tr>
+            <th>Design question</th>
+            <th class="num">Query</th><th class="num">Datastore</th><th class="num">Retriever</th>
+            <th class="num">Retr.&nbsp;Results</th><th class="num">Generator</th><th class="num">Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><b>W1</b> &middot; When to retrieve?</td><td class="num tick">&check;</td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num tick">&check;</td><td class="num"></td></tr>
+          <tr><td><b>W2</b> &middot; What evidence?</td><td class="num tick">&check;</td><td class="num tick">&check;</td><td class="num"></td><td class="num tick">&check;</td><td class="num"></td><td class="num"></td></tr>
+          <tr><td><b>W3</b> &middot; What query form?</td><td class="num tick">&check;</td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num"></td></tr>
+          <tr><td><b>W4</b> &middot; Where to retrieve?</td><td class="num tick">&check;</td><td class="num"></td><td class="num tick">&check;</td><td class="num"></td><td class="num"></td><td class="num"></td></tr>
+          <tr><td><b>W5</b> &middot; Which retriever?</td><td class="num tick">&check;</td><td class="num"></td><td class="num tick">&check;</td><td class="num"></td><td class="num"></td><td class="num"></td></tr>
+          <tr><td><b>W6</b> &middot; Which generator?</td><td class="num tick">&check;</td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num"></td></tr>
+          <tr class="hl"><td><b>H</b> &middot; How to inject evidence?</td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num tick">&check;</td><td class="num tick">&check;</td><td class="num"></td></tr>
+        </tbody>
+      </table>
+      <div class="tnote">A check marks the component whose design must change to answer the question. The mapping is asymmetric: <b>the Query component participates in all six W-questions</b> &mdash; the primary decision point in agentic RAG.</div>
+    </div>
+
+    <div class="morph" style="margin-top:22px">
+      <div class="mcol" style="--mc:var(--q-design)">
+        <h3>Decision autonomy</h3>
+        <div class="msub">Which retrieval-related decisions a system makes for itself.</div>
+        <ol>
+          <li><span class="lvl">0</span><div><div class="what">Static</div><div class="desc">The execution path is fixed before the request arrives.</div></div></li>
+          <li><span class="lvl">1</span><div><div class="what">Routing</div><div class="desc">A configuration is selected once, from the request.</div></div></li>
+          <li><span class="lvl">2</span><div><div class="what">Looping</div><div class="desc">Retrieval is revisited in light of what was read.</div></div></li>
+          <li><span class="lvl">3</span><div><div class="what">Planning</div><div class="desc">The task is decomposed and dependent subgoals are scheduled.</div></div></li>
+        </ol>
+      </div>
+      <div class="mcol" style="--mc:var(--q-runtime)">
+        <h3>Knowledge organization</h3>
+        <div class="msub">How the evidence a system can reach is structured.</div>
+        <ol>
+          <li><span class="lvl">0</span><div><div class="what">Flat</div><div class="desc">Text segments retrieved by similarity.</div></div></li>
+          <li><span class="lvl">1</span><div><div class="what">Hierarchical</div><div class="desc">Summarization or abstraction levels over the corpus.</div></div></li>
+          <li><span class="lvl">2</span><div><div class="what">Graph</div><div class="desc">Entity&ndash;relationship or hypergraph structure to traverse.</div></div></li>
+          <li><span class="lvl">3</span><div><div class="what">Agent-native memory</div><div class="desc">Stores the system itself writes and reuses.</div></div></li>
+        </ol>
+      </div>
+      <div class="mcol" style="--mc:var(--q-eval)">
+        <h3>Quality control</h3>
+        <div class="msub">What verifies the system&rsquo;s claims.</div>
+        <ol>
+          <li><span class="lvl">0</span><div><div class="what">None</div><div class="desc">Retrieval results are trusted as they arrive.</div></div></li>
+          <li><span class="lvl">1</span><div><div class="what">Post-hoc</div><div class="desc">Evidence is filtered, re-ranked or corrected after retrieval.</div></div></li>
+          <li><span class="lvl">2</span><div><div class="what">Intrinsic</div><div class="desc">The model assesses its own output during generation.</div></div></li>
+          <li><span class="lvl">3</span><div><div class="what">Process</div><div class="desc">Step-level verification, optionally escalating to external checks.</div></div></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>What the vocabulary exposes</h3>
+      <p>Across 35 mapped representative methods, autonomy has outrun verification and structure concentrates where autonomy is limited: 9 of 14 methods at the planning position carry intrinsic-or-stronger quality control (64%), versus 4 of 21 below it (19%); only 1 of 14 (7%) reaches graph-or-memory organization, versus 9 of 21 (43%). The vocabulary&rsquo;s value is making such asymmetries explicit &mdash; and pointing at the configurations where they break down.</p>
+    </div>
+  </section>
+
+  <!-- ── Landscape ─────────────────────────────────────────────────────── -->
+  <section id="landscape">
+    <div class="eyebrow">The literature landscape</div>
+    <h2>What the library covers</h2>
+    <p class="lede">The survey&rsquo;s reading library was screened and tagged by cluster, venue and year. The figures below are the paper&rsquo;s own view of that coverage.</p>
+    <div class="figrow">
+      <figure>
+        <a class="zoom" href="assets/fig_year_dist.png" data-caption="Publication years across the curated library">
+        <img src="assets/fig_year_dist.png" alt="Bar chart of papers per year in the curated library">
+        </a>
+        <figcaption><b>Years.</b> The field&rsquo;s shift is visible in the distribution: the bulk of the library is 2025&ndash;2026 work.<span class="zoomtag">Click to enlarge &#8599;</span></figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/fig_venue_dist.png" data-caption="Venues represented in the curated library">
+        <img src="assets/fig_venue_dist.png" alt="Bar chart of papers per venue in the curated library">
+        </a>
+        <figcaption><b>Venues.</b> How much of the work has passed peer review versus circulating as preprints &mdash; a distinction the survey keeps visible when it grades evidence.<span class="zoomtag">Click to enlarge &#8599;</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ── Reading room ──────────────────────────────────────────────────── -->
+  <section id="catalog">
+    <div class="eyebrow">Reading room</div>
+    <h2>Follow your curiosity</h2>
+    <p class="lede">The companion catalog holds 1,049 screened papers &mdash; every one tagged by cluster, venue and year, with abstracts and reading notes shipped in the repository. Search it right here, or open the full catalog for filters.</p>
+    <div class="room">
+      <div class="rrow0">
+        <input type="search" id="room-q" placeholder="Search 1,049 papers &mdash; title, author, venue or cluster" aria-label="Search the catalog" disabled>
+        <a class="sbtn" href="papers.html">Full catalog</a>
+        <a class="sbtn" href="mailto:hengchang.hu@oc.netease.com?subject=%5BCatalog%5D%20correction">Suggest a paper</a>
+      </div>
+      <p class="rempty" id="room-count">Loading the catalog&hellip;</p>
+      <div id="room-list"></div>
+    </div>
+    <p class="tnote" style="border:0;background:none;padding-left:0">Found a missing paper, a wrong venue, or a cluster tag that looks off? Corrections are welcome by email.</p>
+  </section>
+
+  <!-- ── Repository ────────────────────────────────────────────────────── -->
+  <section id="repo">
+    <div class="eyebrow">Repository</div>
+    <h2>Everything behind the paper</h2>
+    <p class="lede">Sources, bibliography and artifact code are released together; the repository links go live when the paper does.</p>
+    <div class="repos">
+      <a class="repo" href="https://github.com/HoldenHu/RAG-Survey"><b>bib/</b><span>Verified BibTeX: 1,118 records, 684 cited in the text, duplicate merges documented</span></a>
+      <a class="repo" href="https://github.com/HoldenHu/RAG-Survey"><b>chapters/</b><span>The manuscript sources, including the curation appendix and its accounting tables</span></a>
+      <a class="repo" href="https://github.com/HoldenHu/RAG-Survey"><b>fig/</b><span>Figures and their data, including the coverage plots above</span></a>
+      <a class="repo" href="https://github.com/HoldenHu/RAG-Survey"><b>code/</b><span>Verification and curation tooling used to check the library</span></a>
+    </div>
+  </section>
+
+  <!-- ── Citation ──────────────────────────────────────────────────────── -->
+  <section id="citation" class="tight">
+    <div class="eyebrow">Citation</div>
+    <h2>Cite this survey</h2>
+    <pre class="code" id="bibtex"><button class="copybtn" id="copybtn" type="button">Copy</button><code>@article{hu2026agentera,
+  title   = {Retrieval-Augmented Generation in the Agent Era:
+             A Question-Driven Survey from Components to
+             Adaptive Control},
+  author  = {Hu, Hengchang},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</code></pre>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Hengchang Hu &middot; NetEase Fuxi AI SG Lab</span>
+    <span>Paper CC&nbsp;BY&nbsp;4.0 &middot; Code MIT</span>
+    <span><a href="https://github.com/HoldenHu/RAG-Survey">GitHub</a></span>
+    <span><a href="papers.html">Paper catalog</a></span>
+    <span><a href="citation-graph.html">Citation graph</a></span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-label="Enlarged figure">
+  <div class="lbbar">
+    <span id="lb-cap"></span>
+    <span class="sp"></span>
+    <a id="lb-open" href="#" target="_blank" rel="noopener">Open original</a>
+    <button id="lb-close" type="button">Close &times;</button>
+  </div>
+  <img id="lb-img" src="" alt="">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Citation Graph — RAG in the Agent Era</title>
+<meta name="description" content="The survey's citation network: which works anchor which chapter, and which papers are cited together. Interactive graph built from the manuscript's own bibliography.">
+<link rel="canonical" href="https://holdenhu.github.io/RAG-Survey/citation-graph.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Citation Graph — RAG in the Agent Era">
+<meta property="og:description" content="Which works anchor which chapter of the survey, and which papers are cited together.">
+<meta property="og:image" content="https://holdenhu.github.io/RAG-Survey/assets/og_card.png">
+<meta name="theme-color" content="#16243d">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/vis-network.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  #graphContainer { height: 660px; }
+  .graph-layout { display: grid; grid-template-columns: 1fr 304px; gap: 18px; align-items: start; }
+  .gsearch { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .gsearch input[type=search] {
+    flex: 1; min-width: 220px; padding: 10px 13px; border: 1px solid var(--line);
+    border-radius: 8px; font: inherit; font-size: 0.9rem; color: var(--ink); background: var(--bg);
+  }
+  .gsearch input[type=search]:focus { outline: none; border-color: var(--ink); }
+  .legend-item.off { opacity: 0.4; }
+  .legend-item { cursor: pointer; user-select: none; }
+  .legend-item .n { margin-left: auto; color: var(--faint); font-variant-numeric: tabular-nums; }
+  .sel-title { font-size: 0.86rem; color: var(--ink); font-weight: 600; line-height: 1.45; }
+  .sel-meta { font-size: 0.78rem; color: var(--muted); margin-top: 5px; }
+  .sel-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hint { font-size: 0.82rem; color: var(--muted); }
+  @media (max-width: 900px) { .graph-layout { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html"><img class="icon" src="assets/title_icon.png" alt=""></a>
+    <span class="wordmark">RAG Survey</span>
+    <span class="spacer"></span>
+    <nav>
+      <a href="index.html#summary">Summary</a>
+      <a href="index.html#questions">Questions</a>
+      <a href="index.html#vocabulary">Vocabulary</a>
+      <a href="index.html#landscape">Landscape</a>
+      <a href="papers.html">Catalog</a>
+      <a href="citation-graph.html" class="on">Citations</a>
+      <a href="index.html#citation">Cite</a>
+    </nav>
+  </div>
+  <div class="qstrip" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</header>
+
+<div class="hero-lite">
+  <div class="wrap">
+    <h1>Citation graph</h1>
+    <p>Every work cited in the manuscript, coloured by the chapter that leans on it, linked to the works it is most often cited alongside. Built directly from <code>rag.bib</code> and the chapter sources, so it moves with the paper.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="tight">
+    <div class="graphbar">
+      <input type="search" id="g-search" placeholder="Find a paper — title, author or bibkey" aria-label="Search the graph" disabled>
+      <button class="sbtn" id="g-fit" type="button">Fit view</button>
+      <button class="sbtn" id="g-freeze" type="button" aria-pressed="false">Freeze layout</button>
+      <span class="count" id="g-count">Loading the graph&hellip;</span>
+    </div>
+
+    <div class="graph-layout">
+      <div id="graphContainer"></div>
+
+      <aside>
+        <div class="sidecard">
+          <h3>Selected paper</h3>
+          <div class="body" id="g-sel">
+            <p class="hint">Click a node to see the work it stands for. Node size is the number of citations in the manuscript; an edge means the two works are cited together in the same paragraph at least twice.</p>
+          </div>
+        </div>
+        <div class="sidecard">
+          <h3>Most cited in the manuscript</h3>
+          <div class="body" id="g-top"></div>
+        </div>
+        <div class="sidecard">
+          <h3>Chapters</h3>
+          <div class="body" id="g-legend"><p class="hint">Loading&hellip;</p></div>
+          <div class="tnote" style="font-size:0.74rem">Click a chapter to isolate it. Papers are coloured by the chapter that cites them most.</div>
+        </div>
+      </aside>
+    </div>
+
+    <p class="tnote" style="border:0;background:none;padding-left:0">Papers without a stable public link are shown by title only. The graph is regenerated from the manuscript sources with <code>site/build_graph.py</code>.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Hengchang Hu &middot; NetEase Fuxi AI SG Lab</span>
+    <span>Paper CC&nbsp;BY&nbsp;4.0 &middot; Code MIT</span>
+    <span><a href="https://github.com/HoldenHu/RAG-Survey">GitHub</a></span>
+    <span><a href="index.html">Survey home</a></span>
+    <span><a href="papers.html">Paper catalog</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/vis-network.min.js"></script>
+<script src="assets/js/graph.js"></script>
+</body>
+</html>

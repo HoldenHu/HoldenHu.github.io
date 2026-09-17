@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper Catalog — RAG in the Agent Era</title>
+<meta name="description" content="The companion catalog of the RAG survey: 1,049 screened papers tagged by cluster, venue and year, with abstracts and reading notes.">
+<link rel="canonical" href="https://holdenhu.github.io/RAG-Survey/papers.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Paper Catalog — RAG in the Agent Era">
+<meta property="og:description" content="1,049 screened papers from the RAG survey, tagged by cluster, venue and year.">
+<meta property="og:image" content="https://holdenhu.github.io/RAG-Survey/assets/og_card.png">
+<meta name="theme-color" content="#16243d">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/catalog.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html"><img class="icon" src="assets/title_icon.png" alt=""></a>
+    <span class="wordmark">RAG Survey</span>
+    <span class="spacer"></span>
+    <nav>
+      <a href="index.html#summary">Summary</a>
+      <a href="index.html#questions">Questions</a>
+      <a href="index.html#vocabulary">Vocabulary</a>
+      <a href="index.html#landscape">Landscape</a>
+      <a href="papers.html" class="on">Catalog</a>
+      <a href="citation-graph.html">Citations</a>
+      <a href="index.html#citation">Cite</a>
+    </nav>
+  </div>
+  <div class="qstrip" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</header>
+
+<div class="hero-lite">
+  <div class="wrap">
+    <h1>Paper catalog</h1>
+    <p>Every paper screened into the survey&rsquo;s reading library, tagged by cluster, venue and year. Abstracts and reading notes ship with the repository; corrections are welcome by email.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="tight">
+    <div class="filters">
+      <input type="search" id="cat-q" placeholder="Search 1,049 papers — title, author, venue, cluster" aria-label="Search the catalog" disabled>
+      <select id="cat-cluster" aria-label="Filter by cluster"></select>
+      <select id="cat-year" aria-label="Filter by year"></select>
+      <select id="cat-sort" aria-label="Sort">
+        <option value="year">Newest first</option>
+        <option value="year-asc">Oldest first</option>
+        <option value="title">Title A&ndash;Z</option>
+        <option value="cluster">Cluster</option>
+      </select>
+    </div>
+    <p class="catfoot"><span class="count" id="cat-count">Loading the catalog&hellip;</span></p>
+    <div class="plist" id="plist"></div>
+    <div class="catfoot">
+      <button class="sbtn" id="cat-more" type="button" hidden>Show more</button>
+      <a class="sbtn" href="mailto:hengchang.hu@oc.netease.com?subject=%5BCatalog%5D%20correction">Suggest a paper</a>
+      <a class="sbtn" href="index.html">Back to the survey</a>
+    </div>
+    <p class="tnote" style="border:0;background:none;padding-left:0">Titles link to arXiv or the publisher&rsquo;s DOI. Papers without a stable public link are listed by title only.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Hengchang Hu &middot; NetEase Fuxi AI SG Lab</span>
+    <span>Paper CC&nbsp;BY&nbsp;4.0 &middot; Code MIT</span>
+    <span><a href="https://github.com/HoldenHu/RAG-Survey">GitHub</a></span>
+    <span><a href="index.html">Survey home</a></span>
+    <span><a href="citation-graph.html">Citation graph</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
